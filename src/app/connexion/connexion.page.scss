@@ -1,0 +1,40 @@
+.connexion{ 
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.logo{
+   
+    display: flex;
+    height: 180px;
+    justify-content: center;
+    padding-top: 30px;
+
+}
+h3{
+    text-align: center;
+    padding-top: 40px;
+    color: black;
+    font-weight: bold;
+}
+.fontt{
+    background-color: white;
+}
+.input-label{
+    color: black;
+}
+h6{
+    color: black;
+}
+.connexion label input{
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    padding: 8px;
+    
+}
+// ion-content{
+//     background-color: white;
+// }

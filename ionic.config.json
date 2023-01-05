@@ -1,0 +1,7 @@
+{
+  "name": "FrontFin",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
