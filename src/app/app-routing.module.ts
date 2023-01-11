@@ -50,6 +50,10 @@ const routes: Routes = [
   {
     path: 'dash-home',
     loadChildren: () => import('./dash-home/dash-home.module').then( m => m.DashHomePageModule)
+  },
+  {
+    path: 'dash-accueil',
+    loadChildren: () => import('./dash-accueil/dash-accueil.module').then( m => m.DashAccueilPageModule)
   }
 ];
 @NgModule({
