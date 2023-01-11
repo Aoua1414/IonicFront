@@ -22,12 +22,12 @@ const routes: Routes = [
         loadChildren: () => import('../rdv/rdv.module').then(m => m.RdvPageModule)
       },
       {
-        path: 'adresse',
-        loadChildren: () => import('../adresse/adresse.module').then(m => m.AdressePageModule)
+        path: 'pharmacien',
+        loadChildren: () => import('../pharmacien/pharmacien.module').then(m => m.PharmacienPageModule)
       },
       {
         path: 'ajout',
-        loadChildren: () => import('../adresse/adresse.module').then(m => m.AdressePageModule)
+        loadChildren: () => import('../ajout/ajout.module').then(m => m.AjoutPageModule)
       },
       {
         path: 'inscription',

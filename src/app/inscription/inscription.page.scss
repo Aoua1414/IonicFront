@@ -1,5 +1,5 @@
 .connexion{ 
-    padding-top: 60px;
+    padding-top: -20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,14 +8,17 @@
 .logo{
    
     display: flex;
-    height: 180px;
+    height: 300px;
     justify-content: center;
-    padding-top: 30px;
+    padding-top: -50px;
 
+}
+.logo img{
+    padding-top: -30px;
 }
 h3{
     text-align: center;
-    padding-top: 40px;
+    padding-top: -40px;
     color: black;
     font-weight: bold;
 }
@@ -37,3 +40,6 @@ h6{
 // ion-content{
 //     background-color: white;
 // }
+ion-content{
+    --background:#FFF;
+    }

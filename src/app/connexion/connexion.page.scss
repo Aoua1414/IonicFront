@@ -1,5 +1,5 @@
 .connexion{ 
-    padding-top: 60px;
+    padding-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,3 +38,7 @@ h6{
 // ion-content{
 //     background-color: white;
 // }
+
+ion-content{
+    --background:#FFF;
+    }

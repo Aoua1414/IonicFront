@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AdressePageRoutingModule } from './adresse-routing.module';
+import { HistoTraitementPageRoutingModule } from './histo-traitement-routing.module';
 
-import { AdressePage } from './adresse.page';
+import { HistoTraitementPage } from './histo-traitement.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AdressePageRoutingModule
+    HistoTraitementPageRoutingModule
   ],
-  declarations: [AdressePage]
+  declarations: [HistoTraitementPage]
 })
-export class AdressePageModule {}
+export class HistoTraitementPageModule {}

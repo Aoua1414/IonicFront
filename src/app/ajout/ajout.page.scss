@@ -1,10 +1,16 @@
 .logo{
    
     display: flex;
-    height: 180px;
+    height: 490px;
     justify-content: center;
-    padding-top: 30px;
+    padding-top: -20px;
 
+}
+.oh{
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    height: 400px;
 }
 .fontt{
     background-color: white;
@@ -21,3 +27,32 @@ h3{
 h6{
     color: black;
 }
+
+ion-icon{
+    
+}
+.iii{
+    padding-top: -40px;
+    padding-bottom: 70px;
+}
+
+ion-content{
+    --background:#FFF;
+    }
+    .im{
+        padding-bottom: 60px;
+        height: 50px;
+        width: 70px;
+    }
+
+    .rd{
+        background-color: #149B54;
+        height: 140px;
+    }
+    // h2{
+    //     margin-bottom: 30px;
+    // }
+    .oh{
+        padding-bottom: 70px;
+         margin-top: -40px;
+    }

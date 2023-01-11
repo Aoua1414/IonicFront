@@ -1,10 +1,10 @@
-.fontt{
-    background-color: white;
-}
+// .fontt{
+//     background-color: white;
+// }
 .logo{
    
     display: flex;
-    height: 180px;
+    height: 300px;
     justify-content: center;
     padding-top: 30px;
 
@@ -15,9 +15,15 @@ h2{
 }
 h1{
     text-align: center;
-    font-weight: bold;
+    font-weight:bold;
     color: black;
+    padding-bottom: 40px;
+    font-size: 90px;
 }
 .text-center{
     padding-top: 50px;
+}
+
+ion-content{
+--background:#FFF;
 }
