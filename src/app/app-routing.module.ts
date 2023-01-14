@@ -54,6 +54,18 @@ const routes: Routes = [
   {
     path: 'dash-accueil',
     loadChildren: () => import('./dash-accueil/dash-accueil.module').then( m => m.DashAccueilPageModule)
+  },
+  {
+    path: 'modif-traitement',
+    loadChildren: () => import('./modif-traitement/modif-traitement.module').then( m => m.ModifTraitementPageModule)
+  },
+  {
+    path: 'modif-rdv',
+    loadChildren: () => import('./modif-rdv/modif-rdv.module').then( m => m.ModifRdvPageModule)
+  },
+  {
+    path: 'mes-histo',
+    loadChildren: () => import('./mes-histo/mes-histo.module').then( m => m.MesHistoPageModule)
   }
 ];
 @NgModule({
