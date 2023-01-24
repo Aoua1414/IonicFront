@@ -10,26 +10,45 @@
       <img src="../assets/log.png" alt="">
     </div>
     <h3>VEUILLEZ VOUS CONNECTER A VOTRE COMPTE</h3>
-    <div class="connexion">
+
+    <div class="connexion">  
+      <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+    
       <label class="item item-input item-stacked-label mb-4">
-        <span class="input-label">Nom et Prenom</span><br>
-        <input type="text" placeholder="Votre pseudo">
-      </label>
-    
-      
-      <!-- <label class="item item-input item-stacked-label mb-4">
-        <span class="input-label ">Numero</span><br>
-        <input type="text" placeholder="Votre numero">
-      </label> -->
-    
+        <span class="input-label" >Nom et Prenom</span><br>
+        <input type="text" placeholder="Votre pseudo" name="username"
+        [(ngModel)]="form.username"
+         required
+          #username="ngModel">
+         </label>
+         <div
+            class="alert alert-danger col-md-6"
+            role="alert"
+            *ngIf="username.errors && f.submitted"
+          >
+           Nom d'utilisateur est obligatoire !
+          </div>
   
       <label class="item item-input item-stacked-label mb-4">
         <span class="input-label">Mot de passe</span><br>
-        <input type="password" placeholder="votre password">
+        <input type="password" placeholder="votre password" name="password" [(ngModel)]="form.password" required minlength="6"  #password="ngModel">
       </label>
+      
+      <div class="alert alert-danger  col-md-6"
+      role="alert"
+      *ngIf="password.errors && f.submitted">
+      <div *ngIf="password.errors">Mot de passe est obligatoire !</div>
+      <div *ngIf="password.errors">
+       6 caractères au minimum
+      </div>
     </div>
-    <div class="text-center" >
-      <button class="btn btn-success">se connecter</button>
+
+      <div class="text-center" >
+        <button type="submit" class="btn btn-success">se connecter</button>
+      </div>
+
+        </form>
+
     </div>
     
     <h6 style="text-align: center;">OU</h6>

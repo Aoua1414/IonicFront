@@ -4,6 +4,11 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
+    redirectTo: 'accueil',
+    pathMatch:'full'
+  },
+  {
+    path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
@@ -44,18 +49,6 @@ const routes: Routes = [
     loadChildren: () => import('./pharmacien/pharmacien.module').then( m => m.PharmacienPageModule)
   },
   {
-    path: 'dashboard',
-    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
-  },
-  {
-    path: 'dash-home',
-    loadChildren: () => import('./dash-home/dash-home.module').then( m => m.DashHomePageModule)
-  },
-  {
-    path: 'dash-accueil',
-    loadChildren: () => import('./dash-accueil/dash-accueil.module').then( m => m.DashAccueilPageModule)
-  },
-  {
     path: 'modif-traitement',
     loadChildren: () => import('./modif-traitement/modif-traitement.module').then( m => m.ModifTraitementPageModule)
   },
@@ -66,6 +59,18 @@ const routes: Routes = [
   {
     path: 'mes-histo',
     loadChildren: () => import('./mes-histo/mes-histo.module').then( m => m.MesHistoPageModule)
+  },
+  {
+    path: 'sidebar',
+    loadChildren: () => import('./sidebar/sidebar.module').then( m => m.SidebarPageModule)
+  },
+  {
+    path: 'notification',
+    loadChildren: () => import('./notification/notification.module').then( m => m.NotificationPageModule)
+  },
+  {
+    path: 'des',
+    loadChildren: () => import('./des/des.module').then( m => m.DesPageModule)
   }
 ];
 @NgModule({

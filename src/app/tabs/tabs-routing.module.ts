@@ -8,15 +8,15 @@ const routes: Routes = [
     component: TabsPage,
     children: [
 
-      {
-        path: 'accueil',
-        loadChildren: () => import('../accueil/accueil.module').then(m => m.AccueilPageModule)
-      },
+      // {
+      //   path: 'accueil',
+      //   loadChildren: () => import('../accueil/accueil.module').then(m => m.AccueilPageModule)
+      // },
 
-      {
-        path: 'historique',
-        loadChildren: () => import('../historique/historique.module').then(m => m.HistoriquePageModule)
-      },
+      // {
+      //   path: 'historique',
+      //   loadChildren: () => import('../historique/historique.module').then(m => m.HistoriquePageModule)
+      // },
       {
         path: 'rdv',
         loadChildren: () => import('../rdv/rdv.module').then(m => m.RdvPageModule)
@@ -30,8 +30,8 @@ const routes: Routes = [
         loadChildren: () => import('../ajout/ajout.module').then(m => m.AjoutPageModule)
       },
       {
-        path: 'inscription',
-        loadChildren: () => import('../inscription/inscription.module').then(m => m.InscriptionPageModule)
+        path: 'des',
+        loadChildren: () => import('../des/des.module').then(m => m.DesPageModule)
       },
       {
         path: '',
@@ -41,11 +41,11 @@ const routes: Routes = [
     ]
     
   },
-  {
-    path: '',
-    redirectTo: '/connexion',
-    pathMatch: 'full'
-  }
+  // {
+  //   path: '',
+  //   redirectTo: '/connexion',
+  //   pathMatch: 'full'
+  // }
 ];
 
 @NgModule({

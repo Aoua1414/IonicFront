@@ -1,8 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Ajout</ion-title>
-    <ion-icon name="exit-outline"></ion-icon>
-    <ion-icon name="notifications-outline"></ion-icon>
+    
   </ion-toolbar>
 </ion-header>
 <ion-content>
@@ -10,36 +9,33 @@
   <!-- <ion-icon name="exit-outline"></ion-icon> -->
  
   
-  <h6>DECONNEXION</h6>
-  <ion-icon name="notifications-outline"></ion-icon>
+  <!-- <h6>DECONNEXION</h6> -->
+ 
 </div>
-
+<div class="ico" style="margin-top: 7%;">
+  <!-- <ion-icon name="exit-outline" style="color: red;margin-left: 4%; font-size: 70px;"></ion-icon> -->
+  <ion-icon name="notifications-outline"  style="color: #149B54; margin-left: 75%;font-size: 70px;"></ion-icon>
+</div>
   
   <div class="fontt">
-    <ion-icon name="exit-outline"></ion-icon>
-    
+   
     <div class="">
-      <img class="oh" src="../assets/tout.png" height="40px" alt="">
+      <img class="oh" src="../assets/tout.png" alt="">
     </div>
     <!-- <h3>Ajouter </h3> -->
     <div class="row" >
       <div class="col-6 iii">
-      <div class="rd">
-        <h2 class="text-center">TRAITEMENT</h2>
+      <div class="rd" style="border-radius: 25px;">
+        <h3 routerLink="/histo-traitement" class="text-center" style="margin-top: -30px;color: white; ">TRAITEMENT</h3>
       <ion-icon class="im mx-auto d-block" name="bandage-outline"></ion-icon>
       </div>
       </div>
       <div class="col-6 iii" > 
-        <div class="rd">
-          <h2 class="text-center">RENDEZ-VOUS</h2>
+        <div class="rd" style="border-radius: 25px;">
+          <h3 routerLink="/historique" class="text-center" style="margin-top: -30px;color: white; ">RENDEZ-VOUS</h3>
         <ion-icon class="im mx-auto d-block" name="alarm-outline"></ion-icon>
         </div>
-        
       </div>
-
-
     </div>
-   
-   
   </div>
 </ion-content>
