@@ -1,8 +1,8 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>Inscription</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
 <!-- <h1 routerLink="/tabs/accueil">inscrire </h1> -->
@@ -12,31 +12,42 @@
   </div>
   <h3>VEUILLEZ REMPLIR TOUS LES CHAMPS </h3>
   <div class="connexion">
+    <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
 
     <label class="item item-input item-stacked-label mb-4">
       <span class="input-label">Nom et Prenom</span><br>
-      <input type="text" placeholder="Votre nom">
+      <input type="text" placeholder="Votre nom" name="username"
+      [(ngModel)]="form.username"
+       required
+        #username="ngModel">
     </label>
 
     <label class="item item-input item-stacked-label mb-4">
       <span class="input-label">Email</span><br>
-      <input type="email" placeholder="Votre email">
+      <input type="email" placeholder="Votre email" name="email" [(ngModel)]="form.email"
+      required
+      #email="">
     </label>
 
     <label class="item item-input item-stacked-label mb-4">
       <span class="input-label ">Numero</span><br>
-      <input type="text" placeholder="Votre numero">
+      <input type="text" placeholder="Votre numero" name="numero" [(ngModel)]="form.numero"
+      required
+      #numero="">
     </label>
   
 
     <label class="item item-input item-stacked-label mb-4">
       <span class="input-label">Mot de passe</span><br>
-      <input type="password" placeholder="votre password">
+      <input type="password" placeholder="votre password" name="password" [(ngModel)]="form.password" required minlength="6"
+        #password="ngModel">
     </label>
-  </div>
+
   <div class="text-center" >
-    <button class="btn btn-success">Se connecter</button>
+    <button type="submit" class="btn btn-success">S'inscrire</button>
   </div>
+</form>
   <i class="bi bi-arrow-return-left" style="color: #149B54;"></i>
+  </div>
   </div>
 </ion-content>

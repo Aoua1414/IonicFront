@@ -13,7 +13,7 @@ export class TraitementServiceService {
 
   constructor(private http:HttpClient) { }
 
-  ajout_traitement(
+    ajout_traitement(
     nom_medoc:any,
     duree_traitement:any,
     nbrePillule:any,

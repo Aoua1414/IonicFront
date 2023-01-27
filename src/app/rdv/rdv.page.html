@@ -1,8 +1,8 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>Rdv</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 
 
@@ -13,27 +13,56 @@
 
   <ion-card class="car bg-white">
 
+
     <div class="cont">
 
+<!-- <div *ngIf="erreur">
+  {{erreur}}
+</div> -->
+<div *ngIf="erreur" class="alert alert-success" role="alert">
+  <strong>{{erreur}}</strong>
+</div>
+
+      <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
   <label class="item item-input item-stacked-label xs-12">
     <span class="input-label">Service medical</span><br>
-    <input type="text" placeholder="Le nom du medicament">
+    <input type="text" placeholder="Service medical" name="service_medical"
+    [(ngModel)]="form.service_medical"
+     required 
+     #service_medical="ngModel">
   </label><br>
 
   <label class="item item-input item-stacked-label mb-4">
     <span class="input-label">Motif du rendez-vous</span><br>
-    <input type="text" placeholder="Donnez le motif du rdv">
+    <input type="text" placeholder="Donnez le motif du rdv" name="motif"
+    [(ngModel)]="form.motif"
+    required
+    #motif="ngModel">
   </label>
-
+<br>
   <label class="item item-input item-stacked-label mb-4">
     <span class="input-label">Date du rendez-vous</span><br>
-    <input type="date" placeholder="Specifier la date">
+    <input type="date" placeholder="Specifier la date" name="daterdv"
+    [(ngModel)]="form.daterdv"
+    required
+    #daterdv="ngModel">
   </label>
+<br>
+  <label class="item item-input item-stacked-label mb-4">
+    <span class="input-label">Heure du rendez-vous</span><br>
+    <input type="time" placeholder="Specifier la date" name="heure"
+    [(ngModel)]="form.heure"
+    required
+    #heure="ngModel">
+  </label>
+  <div class="text-center" >
+    <button type="submit" class="btn btn-success">Ajouter</button>
+  </div>
+  
+</form>
 </div>
 </ion-card>
-  <div class="text-center" >
-    <button class="btn btn-success">Ajouter</button>
-  </div>
+ 
 </div>
 
 
