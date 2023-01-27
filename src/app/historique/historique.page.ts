@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RdvServiceService } from '../Services/rdv-service.service';
 
 @Component({
   selector: 'app-historique',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./historique.page.scss'],
 })
 export class HistoriquePage implements OnInit {
+toutrdv:any;
 
-  constructor() { }
+  constructor(private wretyu : RdvServiceService) { }
 
-  ngOnInit() {
+  ngOnInit():void {
+  this.wretyu.ListerDV().subscribe(data =>{
+    this.toutrdv=data;
+    console.log(this.toutrdv)
+  })
   }
 
 }

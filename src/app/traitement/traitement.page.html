@@ -14,50 +14,81 @@
 
    
 
-   <ion-card class="car bg-white">
+   <ion-card class="car bg-white" style="margin-top: 1%;">
     
     <div class="cont">
+      <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
       <label class="item item-input item-stacked-label mb-4">
         <span class="input-label">Nom Medicament</span><br>
-        <input type="text" placeholder="Le nom du medicament">
+        <input type="text" placeholder="Le nom du medicament" name="nom_medoc"
+        [(ngModel)]="form.nom_medoc"
+         required 
+         #nom_medoc="ngModel">
       </label>
     
       <label class="item item-input item-stacked-label mb-4">
         <span class="input-label">Duree du traitement</span><br>
-        <input type="text" placeholder="Donnez la duree">
+        <input type="text" placeholder="Donnez la duree" name="duree_traitement"
+        [(ngModel)]="form.duree_traitement"
+        required
+        #duree_traitement="ngModel">
       </label>
     
       <label class="item item-input item-stacked-label mb-4">
         <span class="input-label">Nombre de pillules</span><br>
-        <input type="number" placeholder="Prises par jour">
+        <input type="text" placeholder="Prises par jour" name="nbrePillule"
+        [(ngModel)]="form.nbrePillule"
+        required
+        #nbrePillule="ngModel">
       </label>
       
-    
-      <label class="item item-input item-stacked-label mb-4">
-        <span class="input-label">Date de debut</span><br>
-        <input type="date" placeholder="Specifier la date">
-      </label>
-      
-    
-      <label class="item item-input item-stacked-label mb-4">
-        <span class="input-label">Date fin</span><br>
-        <input type="date" placeholder="Specifier la date">
-      </label>
-    
-      <label class=" item item-input item-stacked-label mb-4" style="padding-left: 60px;">
-        <span class="input-label">Nombre de fois par jour</span><br>
-        
-        <input type="number" min="1"  max="5">
-      </label>
       <label class="item item-input item-stacked-label mb-4">
         <span class="input-label">Intervalle</span><br>
-        <input type="number" placeholder="Entre prises">
+        <input type="time" placeholder="Entre prises" name="intervalle"
+        [(ngModel)]="form.intervalle"
+        required
+        #intervalle="ngModel">
+      </label> 
+
+      <label class="item item-input item-stacked-label mb-4" style="margin-left:10% ;">
+        <span class="input-label">Premiere prise</span><br>
+        <input type="time" placeholder="Premiere_prise" name="premiere_prise"
+        [(ngModel)]="form.premiere_prise"
+        required
+        #intervalle="ngModel">
       </label>
+
+      <label class="item item-input item-stacked-label mb-4" style="margin-left: 2%;">
+        <span class="input-label">Date de debut</span><br>
+        <input type="date" placeholder="Specifier la date" name="date_debut"
+        [(ngModel)]="form.date_debut"
+        required
+        #date_debut="ngModel">
+      </label>
+      <br>
+    
+      <label class="item item-input item-stacked-label mb-4" style="margin-left: 2%;">
+        <span class="input-label">Date fin</span><br>
+        <input type="date" placeholder="Specifier la date" name="date_fin"
+        [(ngModel)]="form.date_fin"
+        required
+        #date_fin="ngModel">
+      </label>
+    <br>
+      <label class=" item item-input item-stacked-label mb-4" style="margin-left: 3%;">
+        <span class="input-label">Nombre de fois par jour</span><br>
+        
+        <input type="text" min="1"  max="5" name="fois_parjour"
+        [(ngModel)]="form.fois_parjour"
+        required
+        #fois_parjour="ngModel">
+      </label>
+
+      <div class="text-center" >
+        <button class="btn btn-success" type="submit" style="margin-right: 35%;">Ajouter</button>
+      </div>
+    </form>
     </div>
    </ion-card>
-  <div class="text-center" >
-    <button class="btn btn-success">Ajouter</button>
-  </div>
 </div>
-
 </ion-content>

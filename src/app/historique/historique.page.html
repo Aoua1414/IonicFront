@@ -13,60 +13,24 @@
 </div>
 
 <div class="text-center" style="padding-left: 200px;" >
-  <button class="btn btn-success">+ Rendez-vous</button>
+  <button class="btn btn-success" routerLink="/tabs/rdv">+ Rendez-vous</button>
 </div>
 
-<ion-card style="background-color: white; border-color: black; border: 5px;">
+<ion-card style="background-color: white; border-color: black; border: 5px;" *ngFor="let tout of toutrdv">
   <ion-card-header >
-    <ion-card-title style="color: black;" >Service medical</ion-card-title>
+    <ion-card-title style=" color: black;">{{tout.service_medical}}</ion-card-title>
    
     <!-- <ion-card-subtitle>Motif</ion-card-subtitle> -->
   </ion-card-header>
 
-  <ion-card-content style="color: black;" >
-    <h3>Motif rdv</h3>
-    <h3>Date rdv</h3>
+  <ion-card-content style="color: black;">
+    <h3>{{tout.motif}}</h3>
+    <h3>{{tout.date}}</h3>
 <br>
     <ion-icon style="color: red;" name="trash-outline"></ion-icon>
     <ion-icon name="create-outline"></ion-icon>
 
   </ion-card-content>
 </ion-card>
-<ion-card style="background-color: white; border-color: black; border: 5px;">
-  <ion-card-header >
-    <ion-card-title style="color: black;" >Service medical</ion-card-title>
-   
-    <!-- <ion-card-subtitle>Motif</ion-card-subtitle> -->
-  </ion-card-header>
-
-  <ion-card-content style="color: black;" >
-    <h3>Motif rdv</h3>
-    <h3>Date rdv</h3>
-<br>
-    <ion-icon style="color: red;" name="trash-outline"></ion-icon>
-    <ion-icon name="create-outline"></ion-icon>
-
-  </ion-card-content>
-</ion-card>
-<ion-card style="background-color: white; border-color: black; border: 5px;">
-  <ion-card-header >
-    <ion-card-title style="color: black;" >Service medical</ion-card-title>
-   
-    <!-- <ion-card-subtitle>Motif</ion-card-subtitle> -->
-  </ion-card-header>
-
-  <ion-card-content style="color: black;" >
-    <h3>Motif rdv</h3>
-    <h3>Date rdv</h3>
-<br>
-    <ion-icon style="color: red;" name="trash-outline"></ion-icon>
-    <ion-icon name="create-outline"></ion-icon>
-
-  </ion-card-content>
-</ion-card>
-
-
-
-
 </div>
 </ion-content>

@@ -7,7 +7,7 @@ ion-content{
         font-weight: bold;
         font-size: 30px;
     }
-    h1{
+    h4{
         color:black;
         text-align: center;
         font-weight: bold;
@@ -15,10 +15,15 @@ ion-content{
     }
 
     .trait{
-        height: 100px;
-        width: 300px;
+        width: 80%;
+        margin-top: 30%;
+        margin-left: 20%;
     }
     .rdv{
-        height: 100px;
-        width: 300px;
+        width: 80%;
+        margin-top: 8%;
+        margin-left: 20%;
+    }
+    ion-title{
+        background-color: #FFF;
     }

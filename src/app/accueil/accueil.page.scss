@@ -6,20 +6,23 @@
     display: flex;
     height: 300px;
     justify-content: center;
-    padding-top: 30px;
+    padding-top: 10%;
 
 }
 h2{
     text-align: center;
     color: black;
-    margin-top: -20px;
+    margin-top:1%;
+    
+    // border: 10px;
+    // border-color: #149B54;
 }
 h1{
     text-align: center;
     font-weight:bold;
     color: black;
     padding-bottom: 40px;
-    margin-top: -20px;
+    margin-top: 5%;
     font-size: 90px;
 }
 .text-center{
@@ -27,7 +30,8 @@ h1{
 }
 
 ion-content{
---background:#FFF;
+// --background:#FFF;
+background-color: #FFF;
 }
 ion-content{   
     // ICI ON BLOCK LE SCROLLING    
@@ -37,3 +41,8 @@ ion-content{
           overflow: auto; 
             &::-webkit-scrollbar { 
                   display: none;   } }
+
+                  ion-title{
+                    background-color: #FFF;
+                  }
+                  

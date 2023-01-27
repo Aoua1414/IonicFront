@@ -8,10 +8,14 @@ const routes: Routes = [
     component: TabsPage,
     children: [
 
-      // {
-      //   path: 'accueil',
-      //   loadChildren: () => import('../accueil/accueil.module').then(m => m.AccueilPageModule)
-      // },
+      {
+        path: 'des',
+        loadChildren: () => import('../des/des.module').then(m => m.DesPageModule)
+      },
+      {
+        path: 'mes-histo',
+        loadChildren: () => import('../mes-histo/mes-histo.module').then(m => m.MesHistoPageModule)
+      },
 
       // {
       //   path: 'historique',
@@ -22,6 +26,10 @@ const routes: Routes = [
         loadChildren: () => import('../rdv/rdv.module').then(m => m.RdvPageModule)
       },
       {
+        path: 'traitement',
+        loadChildren: () => import('../traitement/traitement.module').then(m => m.TraitementPageModule)
+      },
+      {
         path: 'pharmacien',
         loadChildren: () => import('../pharmacien/pharmacien.module').then(m => m.PharmacienPageModule)
       },
@@ -30,8 +38,17 @@ const routes: Routes = [
         loadChildren: () => import('../ajout/ajout.module').then(m => m.AjoutPageModule)
       },
       {
-        path: 'des',
-        loadChildren: () => import('../des/des.module').then(m => m.DesPageModule)
+        path: 'notification',
+        loadChildren: () => import('../notification/notification.module').then(m => m.NotificationPageModule)
+      },
+      
+      {
+        path: 'histo-traitement',
+        loadChildren: () => import('../histo-traitement/histo-traitement.module').then(m => m.HistoTraitementPageModule)
+      },
+      {
+        path: 'historique',
+        loadChildren: () => import('../historique/historique.module').then(m => m.HistoriquePageModule)
       },
       {
         path: '',
