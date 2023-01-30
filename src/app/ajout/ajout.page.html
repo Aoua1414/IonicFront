@@ -1,9 +1,9 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>Ajout</ion-title>
     
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 <ion-content>
 <div>
   <!-- <ion-icon name="exit-outline"></ion-icon> -->
@@ -12,9 +12,12 @@
   <!-- <h6>DECONNEXION</h6> -->
  
 </div>
-<div class="ico" routerLink="/tabs/notification" style="margin-top: 2%;">
+<div class="ico" routerLink="/tabs/notification" style="margin-top: 8%; margin-left: 80%;">
   <!-- <ion-icon name="exit-outline" style="color: red;margin-left: 4%; font-size: 70px;"></ion-icon> -->
-  <ion-icon name="notifications-outline"  style="color: #149B54; margin-left: 75%;font-size: 70px;"></ion-icon>
+  <!-- <ion-icon name="notifications-outline"  style="color: #149B54; margin-left: 90%;font-size: 100%;"></ion-icon> -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16" style="color: #149B54; ">
+    <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
+  </svg>
 </div>
   
   <div class="fontt">
@@ -23,17 +26,17 @@
       <img class="oh" src="../assets/tout.png" alt="">
     </div>
     <!-- <h3>Ajouter </h3> -->
-    <div class="row" >
+    <div class="row" style= >
       <div class="col-6 iii">
-      <div class="rd" style="border-radius: 25px;">
-        <h3 routerLink="/tabs/histo-traitement" class="text-center" style="margin-top: -30px;color: white; ">TRAITEMENT</h3>
-      <ion-icon class="im mx-auto d-block" name="bandage-outline"></ion-icon>
+      <div class="rd" style="border-radius: 20%;">
+        <h6 routerLink="/tabs/histo-traitement" class="text-center" style="padding:1%;color: white;font-weight: lighter; ">TRAITEMENT</h6>
+      <ion-icon style="font-size: 160%;" class="im mx-auto d-block" name="bandage-outline"></ion-icon>
       </div>
       </div>
       <div class="col-6 iii" > 
-        <div class="rd" style="border-radius: 25px;">
-          <h3 routerLink="/tabs/historique" class="text-center" style="margin-top: -30px;color: white; ">RENDEZ-VOUS</h3>
-        <ion-icon class="im mx-auto d-block" name="alarm-outline"></ion-icon>
+        <div class="rd" style="border-radius: 20%;">
+          <h6 routerLink="/tabs/historique" class="text-center" style="padding: 1% ;color: white;font-weight: lighter; ">RENDEZ-VOUS</h6>
+        <ion-icon style="font-size: 160%;" class="im mx-auto d-block" name="alarm-outline"></ion-icon>
         </div>
       </div>
     </div>

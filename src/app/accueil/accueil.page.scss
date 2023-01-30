@@ -4,15 +4,17 @@
 .logo{
    
     display: flex;
-    height: 300px;
+    height: 10%;
     justify-content: center;
-    padding-top: 10%;
+    padding-top: 8%;
+    margin-right: 8%;
 
 }
-h2{
+h5{
     text-align: center;
     color: black;
-    margin-top:1%;
+    margin-right: 8%;
+    margin-bottom: 15%;
     
     // border: 10px;
     // border-color: #149B54;
@@ -22,11 +24,12 @@ h1{
     font-weight:bold;
     color: black;
     padding-bottom: 40px;
-    margin-top: 5%;
-    font-size: 90px;
+    margin-top: 2%;
+    font-size: 200%;
+    margin-right: 8%;
 }
 .text-center{
-    padding-top: 30px;
+   margin-bottom: 10%;
 }
 
 ion-content{

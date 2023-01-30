@@ -1,17 +1,17 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>Connexion</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
   <div class="fontt">
     <div class="logo">
       <img src="../assets/log.png" alt="">
     </div>
-    <h3>VEUILLEZ VOUS CONNECTER A VOTRE COMPTE</h3>
+    <h6>VEUILLEZ VOUS CONNECTER A VOTRE COMPTE</h6>
 
-    <div class="connexion" style="margin-left: 25%;">  
+    <div class="connexion" style="margin-left: 20%;">  
       <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
     
       <label class="item item-input item-stacked-label mb-4">
@@ -44,17 +44,19 @@
     </div>
 
       <div class="text-center" >
-        <button type="submit" class="btn btn-success" style="margin-right: 30%;">se connecter</button>
+        <button type="submit" class="btn btn-success" style="padding: 1%; margin-right: 25%;">se connecter</button>
       </div>
 
         </form>
 
     </div>
+
+    <h5 routerLink="/inscription" style="text-decoration: underline; color: #149B54; font-weight: bold; margin-left: 10%;">Creer un nouveau compte</h5>
     
-    <h6 style="text-align: center;">OU</h6>
+    <!-- <h6 style="text-align: center;">OU</h6>
     <div class="text-center" >
-      <button class="btn btn-success"routerLink="/inscription" style="margin-left: 4%;">Creer un compte</button>
-    </div>
+      <button class="btn btn-success"routerLink="/inscription" style="padding: 1%;margin-left: 5%;">Creer un compte</button>
+    </div> -->
   </div>
 </ion-content>
 

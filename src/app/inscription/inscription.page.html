@@ -10,7 +10,7 @@
   <div class="logo">
     <img src="../assets/doc.png" alt="">
   </div>
-  <h3>VEUILLEZ REMPLIR TOUS LES CHAMPS </h3>
+  <h6>VEUILLEZ REMPLIR TOUS LES CHAMPS </h6>
   <div class="connexion">
     <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
 
@@ -44,7 +44,7 @@
     </label>
 
   <div class="text-center" >
-    <button type="submit" class="btn btn-success">S'inscrire</button>
+    <button type="submit" class="btn btn-success" style="padding: 1%; margin-right: 20%; margin-bottom: 4%;">S'inscrire</button>
   </div>
 </form>
   <i class="bi bi-arrow-return-left" style="color: #149B54;"></i>
