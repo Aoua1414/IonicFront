@@ -1,6 +1,7 @@
-h3{
-    font-weight: bold;
+h4{
+    
     text-align: center;
+    margin-top: 18%;
 }
 // .cont{
 //     padding-top: 60px;
@@ -19,30 +20,36 @@ h3{
     align-items: center;
     background-color: white;
     color: black;
+    
 }
 .cont label input{
     background-color: white;
     color: black;
     border-radius: 8px;
-    padding: 8px;
+    padding: 8px    ;
 }
 ion-content{
     --background:#FFF;
     }
 
-    .cont .label{
-       width: 100%;
-    }
+    // .cont .label{
+    //    width: 100%;
+    // }
     .car{
         // margin-top: 15px;
         padding-top: 30px;
     }
     .logo{
-        display: flex;
-        height: 160px;
-        justify-content: center;
+        // display: flex;
+        // height: 160px;
+        // justify-content: center;
         // padding-top: 30px;
-        margin-top: -15px;
+        // margin-top: -15px;
         // margin-left: 82px;
+        display: flex;
+        justify-content: center;
+         margin-left: 08%;
+        width: 40%;
+        margin-top: 1%;
     
     }
