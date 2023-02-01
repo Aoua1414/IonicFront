@@ -37,6 +37,6 @@ export class RdvPage implements OnInit {
         else{
           this.erreur = this.success.message
         }
-      })
-
+      }
+      )
 }}

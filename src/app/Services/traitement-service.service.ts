@@ -36,7 +36,7 @@ export class TraitementServiceService {
       "premiere_prise":premiere_prise,
       "intervalle":intervalle  
   }
-    return this.http.post(`http://localhost:8080/api/traitement/ajouter/${id}`,nom_medoc);
+    return this.http.post(`http://localhost:8080/api/traitement/ajouter/${id}`,traitement);
   }
   lister_traitement():Observable<any>{
 

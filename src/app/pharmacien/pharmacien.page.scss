@@ -5,23 +5,22 @@ ion-content{
         color: black;
         text-align: center;
         font-weight: bold;
+        margin-top: 20%;
     }
 
     .li{
         display: flex;
-        height: 240px;
+        width: 40%;
+        margin-top: 8%;
+       // height: 240px;
         justify-content: center;
-        margin-left: 80px;
+        margin-left: 30%;
         // height: 30vh !important;
         // width: 30vh !important;
         // align-items: center;
         // padding-top: -50px;
     }
-    // .cr{
-    //     background-color: #FFF;
-    //     color: black;
-    //     text-align: center;
-    // }
+    
     ion-card{
         background-color: #FFF;
         color: black;

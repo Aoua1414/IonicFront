@@ -51,7 +51,8 @@ constructor(private traitement:TraitementServiceService,private tokenStorage: To
       date_debut,
       date_fin,
       premiere_prise,
-      fois_parjour
+      fois_parjour,
+      user
                           } = this.form;
   this.id = this.tokenStorage.getUser().id;
 
@@ -66,12 +67,18 @@ this.form2.fois_parjour = this.form.fois_parjour
 
 
   console.log('Test '+this.form2.nom_medoc)
-      // this.traitement.ajout_traitement(this.form2,this.id).subscribe(data=>{
-      //   this.tokenStorage.saveToken(data.accessToken);
-      //   this.tokenStorage.saveUser(data);
+  console.log('Test '+this.form2.duree_traitement)
+  console.log('Test '+this.form2.nbrePillule)
+  console.log('Test '+this.form2.intervalle)
+  console.log('Test '+this.form2.date_debut)
+  console.log('Test '+this.form2.date_fin)
+  console.log('Test '+this.form2.premiere_prise)
+  console.log('Test '+this.form2.fois_parjour)
 
-      
-      // })                 
+       this.traitement.ajout_traitement(this.form2.nom_medoc,this.form2.duree_traitement,this.form2.nbrePillule,this.form2.intervalle,this.form2.date_debut,this.form2.date_fin,this.form2.premiere_prise,this.form2.fois_parjour,this.id).subscribe(data=>{
+         this.tokenStorage.saveToken(data.accessToken);
+         this.tokenStorage.saveUser(data);
+ })                 
   }
 
 
