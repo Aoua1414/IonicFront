@@ -67,5 +67,6 @@ listerparIdRdv (idRdv: number):Observable<any>{
   console.log("id du rdv sevice est ",idRdv)
   return this.http.get(`http://localhost:8080/rdv/parid/${idRdv}`);
 }
+//enregistrer 
 
 }

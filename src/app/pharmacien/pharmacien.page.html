@@ -9,22 +9,11 @@
 
 <img src="../assets/ph.png" alt="" class="li">
 
-<ion-card>
-  <h6>Dr Adama TRAORE</h6>
-  <h6> 00-88-00-88</h6>
-  <H6>KALABAN-COURA ACI</H6>
-</ion-card>
 
-<ion-card>
-  <h6>Dr Adama TRAORE</h6>
-  <h6> 00-88-00-88</h6>
-  <H6>KALABAN-COURA ACI</H6>
-</ion-card>
-
-<ion-card>
-  <h6>Dr Adama TRAORE</h6>
-  <h6> 00-88-00-88</h6>
-  <H6>KALABAN-COURA ACI</H6>
+<ion-card *ngFor="let tout of lespharms">
+  <h6>{{tout.nom_prenom}}</h6>
+  <h6>{{tout.numero}}</h6>
+  <H6>{{tout.adresse}}</H6>
 </ion-card>
 
 </ion-content>

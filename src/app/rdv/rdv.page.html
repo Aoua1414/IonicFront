@@ -14,7 +14,7 @@
   <ion-card class="car bg-white;" style="padding: 10%; background-color: white; margin-top: 1%;">
 
 
-    <div class="cont" style="padding-left: 30%; padding-right: 20%;">
+    <div class="cont" style="margin-top: -8%;">
 
 <!-- <div *ngIf="erreur">
   {{erreur}}
@@ -37,7 +37,7 @@
   </label><br>
   <br>
 
-  <label class="item item-input item-stacked-label mb-4">
+  <label class="item item-input item-stacked-label mb-4" style="margin-top: -8%;">
     <span class="input-label">Motif du rendez-vous</span><br>
     <input type="text" placeholder="Donnez le motif du rdv" name="motif"
     [(ngModel)]="form.motif"
@@ -45,7 +45,7 @@
     #motif="ngModel">
   </label>
 <br>
-  <label class="item item-input item-stacked-label mb-4">
+  <label class="item item-input item-stacked-label mb-4" style="margin-top: -8%; margin-left: 10%;">
     <span class="input-label">Date du rendez-vous</span><br>
     <input type="date" placeholder="Specifier la date" name="daterdv"
     [(ngModel)]="form.daterdv"
@@ -53,9 +53,9 @@
     #daterdv="ngModel">
   </label>
 <br>
-  <label class="item item-input item-stacked-label mb-4">
+  <label class="item item-input item-stacked-label mb-4" style="margin-top: -8%;">
     <span class="input-label">Heure du rendez-vous</span><br>
-    <input type="time" placeholder="Specifier la date" name="heure"
+    <input type="time" placeholder="Specifier la date" style="margin-left: 20%;" name="heure"
     [(ngModel)]="form.heure"
     required
     #heure="ngModel">
