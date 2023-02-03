@@ -44,7 +44,8 @@ constructor(private traitement:TraitementServiceService,private tokenStorage: To
   ngOnInit() {
   }
   onSubmit(): void {
-    const { nom_medoc, 
+    const { 
+      nom_medoc, 
       duree_traitement,
       nbrePillule,
       intervalle,
@@ -65,6 +66,7 @@ this.form2.date_fin = this.form.date_fin
 this.form2.premiere_prise = this.form.premiere_prise
 this.form2.fois_parjour = this.form.fois_parjour
 
+//affichage
 
   console.log('Test '+this.form2.nom_medoc)
   console.log('Test '+this.form2.duree_traitement)

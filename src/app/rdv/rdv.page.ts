@@ -10,7 +10,8 @@ import { TokenStorageService } from '../_services/token-storage.service';
 })
 export class RdvPage implements OnInit {
   success: any;
-  form:any= { service_medical: '', motif: '', daterdv: '', heure: '', };
+  form:any= { 
+    service_medical: '', motif: '', daterdv: '', heure: '', };
   erreur: any;
   isLoggedIn: any;
   id: any;
@@ -24,11 +25,14 @@ export class RdvPage implements OnInit {
     this.id = this.tokenStorage.getUser().id;
     console.log(this.id)
   }
-  onSubmit(): void {
 
+  
+  onSubmit(): void {
+  
     const {service_medical, motif,daterdv, heure} = this.form;
-    
-    this.rdv.ajout_rdv(service_medical, motif,daterdv, heure, this.id).subscribe(
+    // pour afficher rdv
+
+    this.rdv.ajout_rdv(this.form.service_medical, this.form.motif,this.form.daterdv, this.form.heure, this.id).subscribe(
       data => {
         this.success = data
         if(this.success.status == true){
@@ -39,4 +43,6 @@ export class RdvPage implements OnInit {
         }
       }
       )
-}}
+}
+
+}

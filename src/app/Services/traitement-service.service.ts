@@ -13,6 +13,8 @@ export class TraitementServiceService {
 
   constructor(private http:HttpClient) { }
 
+// ajouter traitement
+
     ajout_traitement(
     nom_medoc:any,
     duree_traitement:any,
@@ -38,6 +40,9 @@ export class TraitementServiceService {
   }
     return this.http.post(`http://localhost:8080/api/traitement/ajouter/${id}`,traitement);
   }
+
+  //afficher traitement
+  
   lister_traitement():Observable<any>{
 
     return this.http.get(`http://localhost:8080/api/traitement/liste`);
