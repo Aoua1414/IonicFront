@@ -42,6 +42,8 @@ errorMessage = '';
 constructor(private traitement:TraitementServiceService,private tokenStorage: TokenStorageService,private route:Router) { }
 
   ngOnInit() {
+
+    
   }
   onSubmit(): void {
     const { 
