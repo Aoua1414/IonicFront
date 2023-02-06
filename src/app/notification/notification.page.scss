@@ -1,7 +1,7 @@
 ion-content{
     --background:#FFF;
     }
-    h6{
+    h5{
         color: black;
         text-align: center;
         font-weight: bold;
@@ -11,14 +11,11 @@ ion-content{
     .li{
         display: flex;
         margin-top: 2%;
-        // height: 100%;
+       width: 90%;
         justify-content: center;
-        // margin-left: 10%;
+        
          margin-right: 20%;
-        // height: 30vh !important;
-        // width: 30vh !important;
-        // align-items: center;
-        // padding-top: -50px;
+       
     }
     // .cr{
     //     background-color: #FFF;

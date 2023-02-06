@@ -59,14 +59,14 @@ constructor(private traitement:TraitementServiceService,private tokenStorage: To
                           } = this.form;
   this.id = this.tokenStorage.getUser().id;
 
-this.form2.nom_medoc = this.form.nom_medoc
-this.form2.duree_traitement = this.form.duree_traitement
-this.form2.nbrePillule = this.form.nbrePillule
-this.form2.intervalle = this.form.intervalle
-this.form2.date_debut = this.form.date_debut
-this.form2.date_fin = this.form.date_fin
-this.form2.premiere_prise = this.form.premiere_prise
-this.form2.fois_parjour = this.form.fois_parjour
+// this.form2.nom_medoc = this.form.nom_medoc
+// this.form2.duree_traitement = this.form.duree_traitement
+// this.form2.nbrePillule = this.form.nbrePillule
+// this.form2.intervalle = this.form.intervalle
+// this.form2.date_debut = this.form.date_debut
+// this.form2.date_fin = this.form.date_fin
+// this.form2.premiere_prise = this.form.premiere_prise
+// this.form2.fois_parjour = this.form.fois_parjour
 
 //affichage
 
@@ -79,7 +79,7 @@ this.form2.fois_parjour = this.form.fois_parjour
   console.log('Test '+this.form2.premiere_prise)
   console.log('Test '+this.form2.fois_parjour)
 
-       this.traitement.ajout_traitement(this.form2.nom_medoc,this.form2.duree_traitement,this.form2.nbrePillule,this.form2.intervalle,this.form2.date_debut,this.form2.date_fin,this.form2.premiere_prise,this.form2.fois_parjour,this.id).subscribe(data=>{
+       this.traitement.ajout_traitement(this.form2.nom_medoc,this.form2.duree_traitement,this.form2.nbrePillule,this.form2.fois_parjour,this.form2.date_debut,this.form2.date_fin,this.form2.premiere_prise,this.form2.intervalle,this.id).subscribe(data=>{
          this.tokenStorage.saveToken(data.accessToken);
          this.tokenStorage.saveUser(data);
  })                 

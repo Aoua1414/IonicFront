@@ -35,9 +35,10 @@ export class TraitementServiceService {
       "fois_parjour":fois_parjour,
       "date_debut":date_debut,
       "date_fin":date_fin,
-      "premiere_prise":premiere_prise,
-      "intervalle":intervalle  
+      "premiere_prise":premiere_prise+":00",
+      "intervalle":intervalle+":00" 
   }
+  console.log(traitement)
     return this.http.post(`http://localhost:8080/api/traitement/ajouter/${id}`,traitement);
   }
 
