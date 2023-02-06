@@ -49,11 +49,11 @@ const routes: Routes = [
     loadChildren: () => import('./pharmacien/pharmacien.module').then( m => m.PharmacienPageModule)
   },
   {
-    path: 'modif-traitement',
+    path: 'modif-traitement/:id_traitement',
     loadChildren: () => import('./modif-traitement/modif-traitement.module').then( m => m.ModifTraitementPageModule)
   },
   {
-    path: 'modif-rdv',
+    path: 'modif-rdv/:id_rdv',
     loadChildren: () => import('./modif-rdv/modif-rdv.module').then( m => m.ModifRdvPageModule)
   },
   {

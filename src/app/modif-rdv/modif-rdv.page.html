@@ -9,30 +9,36 @@
     <h4>VEUILLEZ REMPLIR TOUS LES CHAMPS </h4>
     <img src="../assets/l.png" alt="" class="logo">
   
-  
+    <ion-icon name="arrow-undo-outline" routerLink="/rdv" style="color: #149B54; font-size: 150%; margin-right:80%; margin-bottom: 5%; "></ion-icon>
+
     <ion-card class="car bg-white" style="padding: 12%; margin-top: -2%;">
-      <form (ngSubmit) = "modifrdv()">
+
+      
+      <!-- <div *ngIf="erreur" class="alert alert-success" role="alert">
+        <strong>{{erreur}}</strong>
+      </div> -->
+      <form (ngSubmit)="modifrdv()">
 
       <div class="cont">
   
     <label class="item item-input item-stacked-label xs-12">
       <span class="input-label">Service medical</span><br>
-      <input type="text" placeholder="Le nom du medicament"  required [(ngModel)]="serviceu">
+      <input type="text" name="service_medical" placeholder="Le nom du medicament" [(ngModel)]="service_medical"  required [(ngModel)]="serviceu">
     </label><br>
   
     <label class="item item-input item-stacked-label mb-4" style="margin-top: 7%;">
       <span class="input-label">Motif du rendez-vous</span><br>
-      <input type="text" placeholder="Donnez le motif du rdv"  required [(ngModel)]="motifu">
+      <input type="text" name="motif" placeholder="Donnez le motif du rdv" [(ngModel)]="motif"  required [(ngModel)]="motifu">
     </label>
   
-    <label class="item item-input item-stacked-label mb-4" style="margin-top: -8%;">
+    <label class="item item-input item-stacked-label mb-4" style="margin-top: -8%; margin-right:20% ;">
       <span class="input-label">Date du rendez-vous</span><br>
-      <input type="date" placeholder="Specifier la date"  required [(ngModel)]="dateu">
+      <input type="date" name="daterdv" placeholder="Specifier la date" [(ngModel)]="daterdv" required [(ngModel)]="dateu">
     </label>
 
-    <label class="item item-input item-stacked-label mb-4" style="margin-top: -8%;">
-      <span class="input-label" >Heure du rendez-vous</span><br>
-      <input type="time" style="margin-left: 30%;" placeholder="Specifier la date"  required [(ngModel)]="heureu">
+    <label class="item item-input item-stacked-label mb-4" style="margin-top: -8%; margin-right: 60%;" >
+      <span class="input-label" style="margin-left: 0%;" >Heure</span><br>
+      <input type="time" name="heure" style="margin-left: 2%;" placeholder="Specifier la date" [(ngModel)]="heure" required [(ngModel)]="heureu">
     </label>
 
   </div>

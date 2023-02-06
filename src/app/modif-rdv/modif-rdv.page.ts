@@ -11,7 +11,7 @@ import { RdvServiceService } from '../Services/rdv-service.service';
 // getter le rdv qui doit etre modifier
 
 export class ModifRdvPage implements OnInit {
- 
+
   id: any;
   toutrdvparid: any;
   id_rdv: any;
@@ -24,7 +24,8 @@ export class ModifRdvPage implements OnInit {
   serviceu: any;
   heureu: any;
   dateu: any;
-
+  message: any;
+  
   constructor(private rdvservice : RdvServiceService, private route:ActivatedRoute) { }
 
   ngOnInit() {
@@ -33,7 +34,7 @@ export class ModifRdvPage implements OnInit {
     this.id = this.id_rdv
     console.log("id du rdv est ",this.id_rdv)
 
-    this.rdvservice.listerparIdRdv(this.id_rdv).subscribe(data =>{
+      this.rdvservice.listerparIdRdv(this.id_rdv).subscribe(data =>{
       this.toutrdvparid=data;
       this.motifu = this.toutrdvparid.motif;
       this.serviceu = this.toutrdvparid.service_medical;
@@ -48,6 +49,8 @@ export class ModifRdvPage implements OnInit {
   modifrdv(){
     this.rdvservice.modif_rdv(this.service_medical, this.motif, this.daterdv, this.heure, this.id_rdv).subscribe(data=>{
       this.att=data;
+
+      this.message = data.message;
       console.log("LE MOTIF modifie est ",this.att.motif)
       console.log("LE service modifie est ",this.att.service_medical)
       console.log("La date modifie est ",this.att.date)

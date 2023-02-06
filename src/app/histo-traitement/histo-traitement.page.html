@@ -15,7 +15,7 @@
 </div>
 
 <div class="text-center" style="margin-left: 60%; padding-top: 2%;" >
-  <button class="btn btn-success" style="padding:2%; margin-bottom: 10%;" routerLink="/tabs/traitement">+ Traitement</button>
+  <button class="btn btn-success" style="padding:2%; margin-bottom: 10%;" routerLink="/tabs/traitement">+ Nouveau</button>
 </div>
 </div>
 <ion-card style="background-color: white; border-color: black; border: 5px;" *ngFor="let abasse of touttraitememt">
@@ -30,7 +30,7 @@
     <h3>{{abasse.date_fin}}</h3>
 <br>
     <ion-icon style="color: red;" name="trash-outline"></ion-icon>
-    <ion-icon name="create-outline"></ion-icon>
+    <ion-icon name="create-outline" [routerLink]="['/modif-traitement', abasse.id_traitement]"></ion-icon>
 
   </ion-card-content>
 </ion-card>

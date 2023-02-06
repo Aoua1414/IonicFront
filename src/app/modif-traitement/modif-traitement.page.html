@@ -1,62 +1,68 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Modif_traitement</ion-title>
-  </ion-toolbar>
-</ion-header>
+ <!-- <ion-header> -->
+  <!-- <ion-toolbar> -->
+    <!-- <ion-title>Modif_traitement</ion-title> -->
+  <!-- </ion-toolbar> -->
+<!-- </ion-header> -->
 
 <ion-content>
   <div class="fontt">
     <div>
 
-      <h3>VEUILLEZ REMPLIR TOUS LES CHAMPS </h3>
+      <h4>VEUILLEZ REMPLIR TOUS LES CHAMPS </h4>
       <img src="../assets/l.png" alt="" class="logo">
     </div>
 
-   
+    <ion-icon name="arrow-undo-outline" routerLink="/traitement" style="color: #149B54; font-size: 150%; margin-right:75%; "></ion-icon>
 
    <ion-card class="car bg-white">
     
+  
+    
+      <form (ngSubmit)="modiftraitement()">
+
     <div class="cont">
       <label class="item item-input item-stacked-label mb-4">
         <span class="input-label">Nom Medicament</span><br>
-        <input type="text" placeholder="Le nom du medicament">
+        <input type="text" placeholder="Le nom du medicament" name="nom_medoc"  required [(ngModel)]="nom_medoc">
       </label>
     
       <label class="item item-input item-stacked-label mb-4">
         <span class="input-label">Duree du traitement</span><br>
-        <input type="text" placeholder="Donnez la duree">
+        <input type="text" placeholder="Donnez la duree" name="duree_traitement" required [(ngModel)]="duree_traitement">
       </label>
     
       <label class="item item-input item-stacked-label mb-4">
         <span class="input-label">Nombre de pillules</span><br>
-        <input type="number" placeholder="Prises par jour">
+        <input type="number" placeholder="Prises par jour" name="fois_parjour" required [(ngModel)]="fois_parjour">
       </label>
       
     
-      <label class="item item-input item-stacked-label mb-4">
+      <label class="item item-input item-stacked-label mb-4" style="margin-right: 15%;">
         <span class="input-label">Date de debut</span><br>
-        <input type="date" placeholder="Specifier la date">
+        <input type="date" placeholder="Specifier la date" name="date_debut" required [(ngModel)]="date_debut">
       </label>
       
     
-      <label class="item item-input item-stacked-label mb-4">
+      <label class="item item-input item-stacked-label mb-4" style="margin-right: 15%;">
         <span class="input-label">Date fin</span><br>
-        <input type="date" placeholder="Specifier la date">
+        <input type="date" placeholder="Specifier la date" name="date_fin" required [(ngModel)]="date_fin">
       </label>
     
-      <label class=" item item-input item-stacked-label mb-4" style="padding-left: 60px;">
+      <label class=" item item-input item-stacked-label mb-4" style="padding-left: 60px; margin-right:23% ;">
         <span class="input-label">Nombre de fois par jour</span><br>
         
-        <input type="number" min="1"  max="5">
+        <input type="number" min="1"  max="5" name="fois_parjour" required [(ngModel)]="fois_parjour">
       </label>
-      <label class="item item-input item-stacked-label mb-4">
+      <label class="item item-input item-stacked-label mb-4" >
         <span class="input-label">Intervalle</span><br>
-        <input type="number" placeholder="Entre prises">
+        <input type="number" placeholder="Entre prises" name="intervalle" required [(ngModel)]="intervalle">
       </label>
     </div>
-   </ion-card>
+   
   <div class="text-center" >
     <button class="btn btn-success">Appliquer</button>
   </div>
+</form>
+</ion-card>
 </div>
 </ion-content>

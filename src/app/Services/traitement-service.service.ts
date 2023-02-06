@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { traitement } from '../Models/traitementModel';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -49,5 +50,49 @@ export class TraitementServiceService {
     return this.http.get(`http://localhost:8080/api/traitement/liste`);
   }
 
+  //modifier traitement
+
+
+  modif_traitement(
+    nom_medoc:any,
+    duree_traitement:any,
+    nbrePillule:any,
+    fois_parjour:any,
+    date_debut:any, 
+    date_fin:any,
+    premiere_prise:any,
+    intervalle:any,
+     id:any
+     ):Observable<any>{
+  
+      console.log(id, "hdghhdhdhdh")
+    const traitement=
+  
+    {
+      "nom_medoc":nom_medoc,
+      "duree_traitement":duree_traitement,
+      "nbrePillule":nbrePillule,
+      "fois_parjour":fois_parjour,
+      "date_debut":date_debut,
+      "date_fin":date_fin,
+      "premiere_prise":premiere_prise,
+      "intervalle":intervalle,
+
+
+  
+  }
+    return this.http.put(`http://localhost:8080/traitement/modifier/${id}`,traitement);
+  }
+  
+  
+  // fonction afficher un seul traitement
+  
+  listerparIdTraitement (id_traitement: number):Observable<any>{
+    console.log("id du traitement est ",id_traitement)
+    return this.http.get(`http://localhost:8080/rdv/parid/${id_traitement}`);
+  }
+  }
+  
+
  
-}
+

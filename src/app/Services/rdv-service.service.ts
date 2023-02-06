@@ -63,9 +63,9 @@ modif_rdv(
 
 // fonction afficher un seul rdv
 
-listerparIdRdv (idRdv: number):Observable<any>{
-  console.log("id du rdv sevice est ",idRdv)
-  return this.http.get(`http://localhost:8080/rdv/parid/${idRdv}`);
+listerparIdRdv (id_rdv: number):Observable<any>{
+  console.log("id du rdv sevice est ",id_rdv)
+  return this.http.get(`http://localhost:8080/rdv/parid/${id_rdv}`);
 }
 //enregistrer 
 

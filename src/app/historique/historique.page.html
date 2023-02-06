@@ -34,7 +34,7 @@
 </div>
 
 <div class="text-center" style="margin-left: 60%; padding-top: 2%;" >
-  <button class="btn btn-success" style="padding: 2%;" routerLink="/tabs/rdv">+ Rendez-vous</button>
+  <button class="btn btn-success" style="padding: 2%;" routerLink="/tabs/rdv">+ Nouveau</button>
 </div>
 
 <ion-card style="background-color: white; border-color: black; border: 5px;" *ngFor="let tout of toutrdv">
@@ -49,7 +49,7 @@
     <h3>{{tout.date}}</h3>
 <br>
     <ion-icon style="color: red;" name="trash-outline"></ion-icon>
-    <ion-icon name="create-outline" [routerLink]="['modif-rdv', tout.id_rdv]"></ion-icon>
+    <ion-icon name="create-outline" [routerLink]="['/modif-rdv', tout.id_rdv]"></ion-icon>
 
   </ion-card-content>
 </ion-card>
