@@ -35,9 +35,14 @@ onSubmit(): void {
         this.isLoggedIn = true;
         this.roles = this.tokenStorage.getUser().roles;
         // this.reloadPage();
-        if(this.isLoggedIn == true){
+       /* if(this.isLoggedIn == true){
           this.route.navigateByUrl("/tabs/des");
-        }
+        }*/
+        this.route.navigateByUrl("/tabs/des");
+
+
+
+        
       },
       err => {
         this.errorMessage = err.error.message;
