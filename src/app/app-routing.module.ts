@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuardService } from './Services/auth-guard.service';
 
 const routes: Routes = [
   {
@@ -9,7 +10,8 @@ const routes: Routes = [
   },
   {
     path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule),
+    canActivate: [AuthGuardService] ,
   },
   {
     path: 'accueil',
@@ -17,20 +19,24 @@ const routes: Routes = [
   },
   {
     path: 'ajout',
-    loadChildren: () => import('./ajout/ajout.module').then( m => m.AjoutPageModule)
+    loadChildren: () => import('./ajout/ajout.module').then( m => m.AjoutPageModule),
+    canActivate: [AuthGuardService] ,
   },
   {
     path: 'historique',
-    loadChildren: () => import('./historique/historique.module').then( m => m.HistoriquePageModule)
+    loadChildren: () => import('./historique/historique.module').then( m => m.HistoriquePageModule),
+    canActivate: [AuthGuardService] 
   },
   {
     path: 'rdv',
-    loadChildren: () => import('./rdv/rdv.module').then( m => m.RdvPageModule)
+    loadChildren: () => import('./rdv/rdv.module').then( m => m.RdvPageModule),
+    canActivate: [AuthGuardService] 
   },
 
   {
     path: 'inscription',
-    loadChildren: () => import('./inscription/inscription.module').then( m => m.InscriptionPageModule)
+    loadChildren: () => import('./inscription/inscription.module').then( m => m.InscriptionPageModule),
+    canActivate: [AuthGuardService]
   },
   {
     path: 'connexion',
@@ -38,39 +44,48 @@ const routes: Routes = [
   },
   {
     path: 'traitement',
-    loadChildren: () => import('./traitement/traitement.module').then( m => m.TraitementPageModule)
+    loadChildren: () => import('./traitement/traitement.module').then( m => m.TraitementPageModule),
+    canActivate: [AuthGuardService] 
   },
   {
     path: 'histo-traitement',
-    loadChildren: () => import('./histo-traitement/histo-traitement.module').then( m => m.HistoTraitementPageModule)
+    loadChildren: () => import('./histo-traitement/histo-traitement.module').then( m => m.HistoTraitementPageModule),
+    canActivate: [AuthGuardService] 
   },
   {
     path: 'pharmacien',
-    loadChildren: () => import('./pharmacien/pharmacien.module').then( m => m.PharmacienPageModule)
+    loadChildren: () => import('./pharmacien/pharmacien.module').then( m => m.PharmacienPageModule),
+    canActivate: [AuthGuardService] 
   },
   {
     path: 'modif-traitement/:id_traitement',
-    loadChildren: () => import('./modif-traitement/modif-traitement.module').then( m => m.ModifTraitementPageModule)
+    loadChildren: () => import('./modif-traitement/modif-traitement.module').then( m => m.ModifTraitementPageModule),
+    canActivate: [AuthGuardService] 
   },
   {
     path: 'modif-rdv/:id_rdv',
-    loadChildren: () => import('./modif-rdv/modif-rdv.module').then( m => m.ModifRdvPageModule)
+    loadChildren: () => import('./modif-rdv/modif-rdv.module').then( m => m.ModifRdvPageModule),
+    canActivate: [AuthGuardService] 
   },
   {
     path: 'mes-histo',
-    loadChildren: () => import('./mes-histo/mes-histo.module').then( m => m.MesHistoPageModule)
+    loadChildren: () => import('./mes-histo/mes-histo.module').then( m => m.MesHistoPageModule),
+    canActivate: [AuthGuardService] 
   },
   {
     path: 'sidebar',
-    loadChildren: () => import('./sidebar/sidebar.module').then( m => m.SidebarPageModule)
+    loadChildren: () => import('./sidebar/sidebar.module').then( m => m.SidebarPageModule),
+    canActivate: [AuthGuardService] 
   },
   {
     path: 'notification',
-    loadChildren: () => import('./notification/notification.module').then( m => m.NotificationPageModule)
+    loadChildren: () => import('./notification/notification.module').then( m => m.NotificationPageModule),
+    canActivate: [AuthGuardService] 
   },
   {
     path: 'des',
-    loadChildren: () => import('./des/des.module').then( m => m.DesPageModule)
+    loadChildren: () => import('./des/des.module').then( m => m.DesPageModule),
+    canActivate: [AuthGuardService]
   }
 ];
 @NgModule({
