@@ -1,7 +1,8 @@
 .logo{
    
     display: flex;
-    height: 490px;
+    // height: 490px;
+
     justify-content: center;
     padding-top: -20px;
 
@@ -79,4 +80,9 @@ ion-content{
     }
     h6{
         font-size: 80%;
+    }
+    .part{
+        // text-align: center;
+        margin-top: 5%;
+        
     }

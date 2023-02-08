@@ -89,7 +89,7 @@ export class TraitementServiceService {
   
   listerparIdTraitement (id_traitement: number):Observable<any>{
     console.log("id du traitement est ",id_traitement)
-    return this.http.get(`http://localhost:8080/rdv/parid/${id_traitement}`);
+    return this.http.get(`http://localhost:8080/api/traitement/parid/${id_traitement}`);
   }
 
   //afficher tous les traitements d'un user

@@ -43,6 +43,7 @@ export class ModifTraitementPage implements OnInit {
      modiftraitement(){
       this.traitementservice.modif_traitement(this.nom_medoc, this.duree_traitement, this.nbrePillule, this.fois_parjour, this.date_debut, this.date_fin, this.premiere_prise, this.intervalle, this.id_traitement).subscribe(data=>{
           this.modifrdv = data;
+          
       })
      }
   

@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: DesPage
-  }
+  },
+  {
+    path: 'ajout',
+    loadChildren: () => import('../ajout/ajout.module').then( m => m.AjoutPageModule),
+  },
 ];
 
 @NgModule({

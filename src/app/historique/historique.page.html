@@ -36,10 +36,10 @@
 <div class="text-center" style="margin-left: 60%; padding-top: 2%;" >
   <button class="btn btn-success" style="padding: 2%;" routerLink="/tabs/rdv">+ Nouveau</button>
 </div>
-
-<ion-card style="background-color: white; border-color: black; border: 5px;" *ngFor="let tout of toutrdv">
+<ion-icon name="arrow-undo-outline" routerLink="/ajout" style="color: #149B54; font-size: 150%; margin-left: 3%; "></ion-icon>
+<ion-card style="background-color: white; border-color: black; border: 5px;" *ngFor="let tout of sesrdv">
   <ion-card-header >
-    <ion-card-title style=" color: black;">{{tout.service_medical}}</ion-card-title>
+    <ion-card-title style=" color: black;  font-family: 'Times New Roman', Times, serif;">{{tout.service_medical}}</ion-card-title>
    
     <!-- <ion-card-subtitle>Motif</ion-card-subtitle> -->
   </ion-card-header>

@@ -8,7 +8,7 @@
 <ion-content>
   <div class="fontt">
     <div>
-
+      
       <!-- <h1>you</h1> -->
       <img src="../assets/l.png" alt="" class="logo">
     </div>
@@ -28,7 +28,7 @@
          #nom_medoc="ngModel">
       </label>`
     
-      <label class="item item-input item-stacked-label mb-4">
+      <label class="item item-input item-stacked-label mb-4" style="margin-top: -9%;">
         <span class="input-label">Duree du traitement</span><br>
         <input type="text" placeholder="Donnez la duree" name="duree_traitement"
         [(ngModel)]="form2.duree_traitement"
@@ -36,7 +36,7 @@
         #duree_traitement="ngModel">
       </label>
     
-      <label class="item item-input item-stacked-label mb-4">
+      <label class="item item-input item-stacked-label mb-4" style="margin-top: -9%;">
         <span class="input-label">Nombre de pillules</span><br>
         <input type="text" placeholder="Prises par jour" name="nbrePillule"
         [(ngModel)]="form2.nbrePillule"
@@ -45,14 +45,14 @@
       </label>
       
       <label class="item item-input item-stacked-label mb-4">
-        <span class="input-label">Intervalle</span><br>
+        <span class="input-label" style="margin-top: -10%;">Intervalle</span><br>
         <input type="time" placeholder="Entre prises" name="intervalle"
         [(ngModel)]="form2.intervalle"
         required
         #intervalle="ngModel">
       </label> 
 
-      <label class="item item-input item-stacked-label mb-4" style="margin-left:10% ;">
+      <label class="item item-input item-stacked-label mb-4" style="margin-left:10%;">
         <span class="input-label">Premiere prise</span><br>
         <input type="time" placeholder="Premiere_prise" name="premiere_prise"
         [(ngModel)]="form2.premiere_prise"
@@ -60,7 +60,7 @@
         #intervalle="ngModel">
       </label>
 
-      <label class="item item-input item-stacked-label mb-4" style="margin-left: 2%;">
+      <label class="item item-input item-stacked-label mb-4" style="margin-left: 2%; margin-top: -8%;">
         <span class="input-label">Date de debut</span><br>
         <input type="date" placeholder="Specifier la date" name="date_debut"
         [(ngModel)]="form2.date_debut"
@@ -68,8 +68,10 @@
         #date_debut="ngModel">
       </label>
       <br>
-    
-      <label class="item item-input item-stacked-label mb-4" style="margin-left: 2%;">
+      <div *ngIf="Message" class="alert alert-success" role="alert">
+        <strong>{{Message}}</strong>
+      </div>
+      <label class="item item-input item-stacked-label mb-4" style="margin-left: 2%; margin-top: -8%;">
         <span class="input-label">Date fin</span><br>
         <input type="date" placeholder="Specifier la date" name="date_fin"
         [(ngModel)]="form2.date_fin"
@@ -77,7 +79,7 @@
         #date_fin="ngModel">
       </label>
     <br>
-      <label class=" item item-input item-stacked-label mb-4" style="margin-left: 3%;">
+      <label class=" item item-input item-stacked-label mb-4" style="margin-left: 3%; margin-top: -8%;">
         <span class="input-label">Nombre de fois par jour</span><br>
         
         <input type="text" min="1"  max="5" name="fois_parjour"
@@ -85,9 +87,9 @@
         required
         #fois_parjour="ngModel">
       </label>
-
-      <div class="text-center"  style="margin-bottom: 10%; margin-top: 2%;">
-        <button class="btn btn-success" type="submit" style="margin-right: 35%;">Ajouter</button>
+     
+      <div class="text-center"  style="margin-bottom: 10%; margin-top: -5%;">
+        <button class="btn btn-success" type="submit" style="margin-right: 25%; ">Ajouter</button>
       </div>
     </form>
     </div>

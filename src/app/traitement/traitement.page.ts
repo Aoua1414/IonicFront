@@ -38,6 +38,7 @@ isLoggedIn = false;
 isLoginFailed = false;
 errorMessage = '';
   id: any;
+  Message: any;
 
 constructor(private traitement:TraitementServiceService,private tokenStorage: TokenStorageService,private route:Router) { }
 
@@ -80,8 +81,10 @@ constructor(private traitement:TraitementServiceService,private tokenStorage: To
   console.log('Test '+this.form2.fois_parjour)
 
        this.traitement.ajout_traitement(this.form2.nom_medoc,this.form2.duree_traitement,this.form2.nbrePillule,this.form2.fois_parjour,this.form2.date_debut,this.form2.date_fin,this.form2.premiere_prise,this.form2.intervalle,this.id).subscribe(data=>{
-         this.tokenStorage.saveToken(data.accessToken);
-         this.tokenStorage.saveUser(data);
+       this.tokenStorage.saveToken(data.accessToken);
+       this.tokenStorage.saveUser(data);
+
+       this.Message = data.message;
  })                 
   }
 

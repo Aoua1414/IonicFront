@@ -18,12 +18,12 @@
   <img src="../assets/l.png" alt="" class="logo">
 
 
-  <ion-icon name="arrow-undo-outline" routerLink="/historique" style="color: #149B54; font-size: 150%; margin-right:80%; "></ion-icon>
-  <ion-card class="car bg-white;" style="padding: 10%; background-color: white; margin-top: 1%;">
+  <ion-icon name="arrow-undo-outline" routerLink="/historique" style="color: #149B54; font-size: 150%; margin-right:80%;  "></ion-icon>
+  <ion-card class="car bg-white;" style=" background-color: white; margin-top: 5%; padding-bottom: -30%;padding-left: 12%; padding-right: 12%; padding-top: 10%;">
 
 
     
-    <div class="cont" style="margin-top: -8%;">
+    <div class="cont" style="margin-top: -10%;">
      
 <!-- <div *ngIf="erreur">
   {{erreur}}
@@ -54,7 +54,7 @@
     #motif="ngModel">
   </label>
 <br>
-  <label class="item item-input item-stacked-label mb-4" style="margin-top: -8%; margin-left: 10%;">
+  <label class="item item-input item-stacked-label mb-4" style="margin-top: -12%; margin-left: 2%;">
     <span class="input-label">Date du rendez-vous</span><br>
     <input type="date" placeholder="Specifier la date" name="daterdv"
     [(ngModel)]="form.daterdv"
@@ -62,14 +62,14 @@
     #daterdv="ngModel">
   </label>
 <br>
-  <label class="item item-input item-stacked-label mb-4" style="margin-top: -8%;">
+  <label class="item item-input item-stacked-label mb-4" style="margin-top: -10%;">
     <span class="input-label">Heure du rendez-vous</span><br>
-    <input type="time" placeholder="Specifier la date" style="margin-left: 20%;" name="heure"
+    <input type="time" placeholder="Specifier la date" style="margin-left: 0%;" name="heure"
     [(ngModel)]="form.heure"
     required
     #heure="ngModel">
   </label>
-  <div class="text-center" style="margin-bottom: 20%; margin-top: -5%;" >
+  <div class="text-center" style="margin-bottom: 20%; margin-top: -2%;" >
     <button type="submit" class="btn btn-success">Ajouter</button>
   </div>
   

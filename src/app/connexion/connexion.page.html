@@ -16,7 +16,7 @@
       <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
     
       <div class="icons">
-        <ion-icon name="person-circle-outline" style="color: #0FA958; margin-left: -20%; margin-right: 4%;  font-size: 160%; " ></ion-icon>
+        <ion-icon name="person-circle-outline" style="color: #0FA958; margin-left: -25%; margin-right: 4%;  font-size: 160%;  " ></ion-icon>
       <label class="item item-input item-stacked-label mb-4">
          
          <input type="text" placeholder="Votre pseudo" name="username"
@@ -34,7 +34,7 @@
            Nom d'utilisateur est obligatoire !
           </div>
   
-          <ion-icon name="key-outline" style="color: #0FA958;font-size: 160%; margin-left: -20%; margin-right: 4%;"></ion-icon>
+          <ion-icon name="key-outline" style="color: #0FA958;font-size: 160%; margin-left: -25%; margin-right: 4%;"></ion-icon>
       <label class="item item-input item-stacked-label mb-4">
         
         <input type="password"  placeholder="Votre password" name="password" [(ngModel)]="form.password" required minlength="6"  #password="ngModel">

@@ -8,7 +8,7 @@ import { TokenStorageService } from '../_services/token-storage.service';
   styleUrls: ['./histo-traitement.page.scss'],
 })
 export class HistoTraitementPage implements OnInit {
-touttraitememt:any;
+  touttraitememt:any;
   user: any;
   sestraitements: any;
 
@@ -20,7 +20,7 @@ touttraitememt:any;
       this.touttraitememt= data;
       console.log('contenu traitememt '+this.touttraitememt)
      })
-    this.abasse.affichertoustraitdunuser(this.user.id).subscribe(data=>{
+      this.abasse.affichertoustraitdunuser(this.user.id).subscribe(data=>{
       this.sestraitements=data
     })
   }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RdvServiceService } from '../Services/rdv-service.service';
+import { TokenStorageService } from '../_services/token-storage.service';
 
 @Component({
   selector: 'app-historique',
@@ -10,8 +11,11 @@ export class HistoriquePage implements OnInit {
 toutrdv:any;
   idRdvv!: number;
   motiff: any;
+  sesrdv: any;
+  user: any;
 
-  constructor(private wretyu : RdvServiceService) { }
+  constructor(private wretyu : RdvServiceService, private storage:TokenStorageService) { }
+
 // getter tous les rdv
 
   ngOnInit():void {
@@ -29,9 +33,10 @@ toutrdv:any;
   }
   })
   
-  
+  // this.wretyu.affichertousrdvdunuser(this.user.id).subscribe(data=>{
+  //   this.sesrdv=data
+  // })
   }
-
 }
 
 
