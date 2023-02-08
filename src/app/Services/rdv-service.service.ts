@@ -10,7 +10,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class RdvServiceService {
-  affichertousrdvdunuser: any;
+ 
   affichertoustraitdunuser(id: any) {
     throw new Error('Method not implemented.');
   }
@@ -76,17 +76,17 @@ listerparIdRdv (id_rdv: number):Observable<any>{
 
 // fonction afficher tous les rdv d'un user
 
-touslesrdvdunuser (id_user: any):Observable<any>{
+// touslesrdvdunuser(id_user: any):Observable<any>{
 
-  return this.http.get(`http://localhost:8080/rdv/parid/${id_user}`);
-}
+//   return this.http.get(`http://localhost:8080/rdv/${id_user}`);
+// }
 
 
- //afficher tous les traitements d'un user
+ //afficher tous les rdv d'un user connecté
  
   recuptouslesrdvdunuser (id_user:any):Observable<any>{
 
-    return this.http.get(`http:// localhost:8080/rdv/rdvduuserconnecte/${id_user}`);
+    return this.http.get(`http://localhost:8080/rdv/rdvduuserconnecte/${id_user}`);
   }
 
 }

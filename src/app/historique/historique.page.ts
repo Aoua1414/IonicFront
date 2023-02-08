@@ -13,13 +13,16 @@ toutrdv:any;
   motiff: any;
   sesrdv: any;
   user: any;
+  rdvs: any;
 
-  constructor(private wretyu : RdvServiceService, private storage:TokenStorageService) { }
+  constructor(private rendevous : RdvServiceService, private storage:TokenStorageService) { }
 
 // getter tous les rdv
 
   ngOnInit():void {
-  this.wretyu.ListerDV().subscribe(data =>{
+
+    this.user=this.storage.getUser()
+  this.rendevous.ListerDV().subscribe(data =>{
     this.toutrdv=data;
 
      this.idRdvv=this.toutrdv.id_rdv;
@@ -36,6 +39,11 @@ toutrdv:any;
   // this.wretyu.affichertousrdvdunuser(this.user.id).subscribe(data=>{
   //   this.sesrdv=data
   // })
+
+
+  this.rendevous.recuptouslesrdvdunuser(this.user.id).subscribe(data =>{
+    this.rdvs=data
+  })
   }
 }
 

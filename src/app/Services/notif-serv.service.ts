@@ -14,8 +14,8 @@ export class NotifServService {
         
     return this.http.get(`http://localhost:8080/rdv/jour/${idUser}`);
   }
-
-    //Lister les rdv
+  
+    //Lister les traitements du jour
  ListerTraitementJour (idUser:any):Observable<any>{
   
   return this.http.get(`http://localhost:8080/api/traitement/jour/${idUser}`);
