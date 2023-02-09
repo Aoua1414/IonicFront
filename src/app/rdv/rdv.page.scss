@@ -30,6 +30,7 @@ h4{
     border-radius: 8px;
     padding: 3px;
     font-family: 'Times New Roman', Times, serif;
+    // text-align: center;
 }
 ion-content{
     --background:#FFF;
@@ -43,12 +44,6 @@ ion-content{
         // padding-top: 30px;
     }
     .logo{
-        // display: flex;
-        // height: 160px;
-        // justify-content: center;
-        // padding-top: 30px;
-        // margin-top: -15px;
-        // margin-left: 82px;
         display: flex;
         justify-content: center;
          margin-left: 2%;
@@ -58,4 +53,5 @@ ion-content{
     }
     text-center{
         font-family: 'Times New Roman', Times, serif;
+        text-align: center;
     }
