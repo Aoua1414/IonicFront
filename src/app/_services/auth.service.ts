@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { Router } from '@angular/router';
+import { TokenStorageService } from './token-storage.service';
 
 const AUTH_API = 'http://localhost:8080/api/auth/';
 
@@ -13,7 +15,8 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class AuthService {
-  constructor(private http: HttpClient, public jwtHelper: JwtHelperService) { }
+  constructor(private http: HttpClient, public jwtHelper: JwtHelperService,
+    private tokenStorage: TokenStorageService,private router:Router) { }
 
   login(username: string, password: string): Observable<any> {
     return this.http.post(AUTH_API + 'signin', {
@@ -36,4 +39,11 @@ export class AuthService {
   // true or false
   return !this.jwtHelper.isTokenExpired(token);
 }
+
+logout(): void{
+  this.tokenStorage.signOut();
+  this.router.navigateByUrl('connexion')
+  window.location.reload();
+}
+
 }

@@ -1,7 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouteReuseStrategy } from '@angular/router';
+import { RouteReuseStrategy, RouterModule } from '@angular/router';
 import { JwtModule } from '@auth0/angular-jwt';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
@@ -23,7 +23,7 @@ export function tokenGetter() {
      tokenGetter: tokenGetter,
     allowedDomains: ["localhost:8103" ]
     },
-  }),],
+  }), RouterModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

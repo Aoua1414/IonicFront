@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { TokenStorageService } from '../_services/token-storage.service';
 
 @Component({
   selector: 'app-des',
@@ -7,7 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DesPage implements OnInit {
 
-  constructor() { }
+// Deconnexion
+
+logout(): void {
+this.tokenStorage.signOut();
+this.route.navigateByUrl('accueil')
+window.location.reload();
+}
+
+  constructor(private tokenStorage: TokenStorageService,
+    private route: Router) { }
 
   ngOnInit() {
   }
