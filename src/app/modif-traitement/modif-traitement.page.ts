@@ -22,6 +22,10 @@ export class ModifTraitementPage implements OnInit {
   premiere_prise:any;
   intervalle:any;
   modifrdv: any;
+  intervallee: any;
+  datedebutt: any;
+  date_finn: any;
+  foisparjourr: any;
   
   constructor(private traitementservice: TraitementServiceService, private route:ActivatedRoute) { }
 
@@ -35,11 +39,16 @@ export class ModifTraitementPage implements OnInit {
       this.nom_medoc=this.touttraitparid.nom_medoc;
       this.duree_traitement=this.touttraitparid.duree_traitement;
       this.nbrePillule=this.touttraitparid.nbrePillule;
+      this.intervallee=this.touttraitparid.intervalle;
+      this.datedebutt=this.touttraitparid.date_debut;
+      this.date_finn=this.touttraitparid.date_fin;
+      this.foisparjourr=this.touttraitparid.fois_parjour;
     
     })
       
 
     }
+
      modiftraitement(){
       this.traitementservice.modif_traitement(this.nom_medoc, this.duree_traitement, this.nbrePillule, this.fois_parjour, this.date_debut, this.date_fin, this.premiere_prise, this.intervalle, this.id_traitement).subscribe(data=>{
           this.modifrdv = data;
