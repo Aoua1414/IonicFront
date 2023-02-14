@@ -19,19 +19,23 @@
 </div>
 </div>
 <ion-icon name="arrow-undo-outline" routerLink="/ajout" style="color: #149B54; font-size: 150%; margin-left: 3%; "></ion-icon>
-<ion-card style="background-color: white; border-color: black; border: 5px;" *ngFor="let abasse of sestraitements">
+<ion-card style="background-color: white; border-color: black; border: 5px;" *ngFor="let onetraitement of sestraitements">
   <ion-card-header >
-    <ion-card-title style="color: black;  font-family: 'Times New Roman', Times, serif;" >{{abasse.nom_medoc}}</ion-card-title>
+    <ion-card-title style="color: black;  font-family: 'Times New Roman', Times, serif;" >{{onetraitement.nom_medoc}}</ion-card-title>
    
     <!-- <ion-card-subtitle>Motif</ion-card-subtitle> -->
   </ion-card-header>
 
   <ion-card-content style="color: black;" >
-    <h3>{{abasse.date_debut}}</h3>
-    <h3>{{abasse.date_fin}}</h3>
+    <h3>{{onetraitement.date_debut}}</h3>
+    <h3>{{onetraitement.date_fin}}</h3>
 <br>
-    <ion-icon style="color: red;" name="trash-outline"></ion-icon>
-    <ion-icon name="create-outline" [routerLink]="['/modif-traitement', abasse.id_traitement]"></ion-icon>
+<!-- <button type="button" class="adpd" data-bs-toggle="modal"  data-bs-target="#supprimer" (click)="openModal(onetraitement.nom_medoc, onetraitement.id_traitement)"> -->
+  <ion-icon style="color: red;"   name="trash-outline"></ion-icon>
+   
+<!-- </button> -->
+   
+    <ion-icon name="create-outline" [routerLink]="['/modif-traitement', onetraitement.id_traitement]"></ion-icon>
 
   </ion-card-content>
 </ion-card>

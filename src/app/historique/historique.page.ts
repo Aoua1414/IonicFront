@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RdvServiceService } from '../Services/rdv-service.service';
 import { TokenStorageService } from '../_services/token-storage.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-historique',
@@ -46,5 +47,39 @@ toutrdv:any;
   })
   }
 }
+
+  // modal suppression
+
+// openModal(username : any, id : number) {
+//   Swal.fire({
+//     title: username,
+//     text: "Commfirmer la suppression ?",
+//     icon: 'warning',
+//     showCancelButton: true,
+//     confirmButtonColor: '#3085d6',
+//     cancelButtonColor: '#d33',
+//     cancelButtonText : "NON",
+//     confirmButtonText: 'OUI'
+//   }).then((result) => {
+//     if (result.isConfirmed) {
+      
+      
+//       //suppp
+//       this.rendevous.supprdv(id).subscribe(() => {});
+//       console.log(id)
+//       Swal.fire({
+//         title: 'Supprimer  avec succès',
+//         icon: 'success',
+//         showCancelButton: true,
+//         confirmButtonColor: '#3085d6',
+//         confirmButtonText: 'OK'
+//       });
+//       window.location.reload()
+
+
+//     }
+//   });
+// }
+// }
 
 

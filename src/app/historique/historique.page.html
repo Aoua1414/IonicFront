@@ -48,8 +48,12 @@
     <h3>{{tout.motif}}</h3>
     <h3>{{tout.date}}</h3>
 <br>
-    <ion-icon style="color: red;" name="trash-outline"></ion-icon>
-    <ion-icon name="create-outline" [routerLink]="['/modif-rdv', tout.id_rdv]"></ion-icon>
+
+<!-- <button type="button" class="adpd" data-bs-toggle="modal"  data-bs-target="#supprimer" (click)="openModal(tout.service_medical, tout.id_rdv)"> -->
+  <ion-icon style="color: red;"   name="trash-outline"></ion-icon>
+   
+<!-- </button> -->
+     <ion-icon name="create-outline" [routerLink]="['/modif-rdv', tout.id_rdv]"></ion-icon>
 
   </ion-card-content>
 </ion-card>

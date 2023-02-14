@@ -23,9 +23,10 @@ export class ModifTraitementPage implements OnInit {
   intervalle:any;
   modifrdv: any;
   intervallee: any;
-  datedebutt: any;
+  date_debutt: any;
   date_finn: any;
   foisparjourr: any;
+  // premiere_prise: any;
   
   constructor(private traitementservice: TraitementServiceService, private route:ActivatedRoute) { }
 
@@ -36,25 +37,35 @@ export class ModifTraitementPage implements OnInit {
     this.traitementservice.listerparIdTraitement(this.id_traitement).subscribe(data=>{
 
       this.touttraitparid=data;
+      console.log("wqertyuio");
+      
       this.nom_medoc=this.touttraitparid.nom_medoc;
       this.duree_traitement=this.touttraitparid.duree_traitement;
       this.nbrePillule=this.touttraitparid.nbrePillule;
       this.intervallee=this.touttraitparid.intervalle;
-      this.datedebutt=this.touttraitparid.date_debut;
+      this.date_debut=this.touttraitparid.date_debut;
       this.date_finn=this.touttraitparid.date_fin;
       this.foisparjourr=this.touttraitparid.fois_parjour;
-    
+      this.premiere_prise=this.touttraitparid.premiere_prise;
     })
       
 
     }
 
      modiftraitement(){
+    
+      console.log(this.date_debut)
       this.traitementservice.modif_traitement(this.nom_medoc, this.duree_traitement, this.nbrePillule, this.fois_parjour, this.date_debut, this.date_fin, this.premiere_prise, this.intervalle, this.id_traitement).subscribe(data=>{
           this.modifrdv = data;
-          
+          this.reloadPage();
       })
      }
+
+     reloadPage(): void {
+      window.location.reload();
+    // this.route.navigateByUrl("/sidebar/w")
+     }
+  
   
   }
 

@@ -89,4 +89,11 @@ listerparIdRdv (id_rdv: number):Observable<any>{
     return this.http.get(`http://localhost:8080/rdv/rdvduuserconnecte/${id_user}`);
   }
 
+
+  // suppression 
+
+  url=`http://localhost:8080/rdv/suprimer/2`
+  public supprdv(id:number){
+    return this.http.delete(`${this.url}/${id}`);
+  }
 }

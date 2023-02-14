@@ -59,6 +59,7 @@ constructor(private traitement:TraitementServiceService,private tokenStorage: To
       user
                           } = this.form;
   this.id = this.tokenStorage.getUser().id;
+  console.log('utilisateur ' +this.id)
 
 // this.form2.nom_medoc = this.form.nom_medoc
 // this.form2.duree_traitement = this.form.duree_traitement
@@ -71,23 +72,26 @@ constructor(private traitement:TraitementServiceService,private tokenStorage: To
 
 //affichage
 
-  console.log('Test '+this.form2.nom_medoc)
-  console.log('Test '+this.form2.duree_traitement)
-  console.log('Test '+this.form2.nbrePillule)
-  console.log('Test '+this.form2.intervalle)
-  console.log('Test '+this.form2.date_debut)
-  console.log('Test '+this.form2.date_fin)
-  console.log('Test '+this.form2.premiere_prise)
-  console.log('Test '+this.form2.fois_parjour)
+  // console.log('Test '+this.form2.nom_medoc)
+  // console.log('Test '+this.form2.duree_traitement)
+  // console.log('Test '+this.form2.nbrePillule)
+  // console.log('Test '+this.form2.intervalle)
+  // console.log('Test '+this.form2.date_debut)
+  // console.log('Test '+this.form2.date_fin)
+  // console.log('Test '+this.form2.premiere_prise)
+  // console.log('Test '+this.form2.fois_parjour)
 
        this.traitement.ajout_traitement(this.form2.nom_medoc,this.form2.duree_traitement,this.form2.nbrePillule,this.form2.fois_parjour,this.form2.date_debut,this.form2.date_fin,this.form2.premiere_prise,this.form2.intervalle,this.id).subscribe(data=>{
        this.tokenStorage.saveToken(data.accessToken);
        this.tokenStorage.saveUser(data);
-
+       this.reloadPage();
        this.Message = data.message;
  })                 
   }
 
-
+  reloadPage(): void {
+    window.location.reload();
+  // this.route.navigateByUrl("/sidebar/w")
+   }
 
 }

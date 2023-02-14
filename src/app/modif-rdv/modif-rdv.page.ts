@@ -51,11 +51,18 @@ export class ModifRdvPage implements OnInit {
       this.att=data;
 
       this.message = data.message;
+      this.reloadPage();
+      
       console.log("LE MOTIF modifie est ",this.att.motif)
       console.log("LE service modifie est ",this.att.service_medical)
       console.log("La date modifie est ",this.att.date)
       console.log("LE heure modifie est ",this.att.heure)
     })
   }
+  reloadPage(): void {
+    window.location.reload();
+  // this.route.navigateByUrl("/sidebar/w")
+   }
+
 
 }

@@ -23,8 +23,8 @@ export class RdvPage implements OnInit {
 
   ngOnInit() {
     this.id = this.tokenStorage.getUser().id;
-    console.log(this.id)
-  }
+    console.log( 'utilisateur ' +this.id)
+  } 
 
   
   onSubmit(): void {
@@ -35,14 +35,28 @@ export class RdvPage implements OnInit {
     this.rdv.ajout_rdv(this.form.service_medical, this.form.motif,this.form.daterdv, this.form.heure, this.id).subscribe(
       data => {
         this.success = data
+
+        
+
         if(this.success.status == true){
           this.erreur = this.success.message
         }
         else{
           this.erreur = this.success.message
+        
         }
+
+        this.reloadPage();
       }
       )
 }
+// supp les champs apres ajout
+
+reloadPage(): void {
+  window.location.reload();
+
+ }
+
+
 
 }

@@ -39,7 +39,7 @@
     
       <label class="item item-input item-stacked-label mb-4" style="margin-right: 15%;">
         <span class="input-label">Date de debut</span><br>
-        <input type="date" placeholder="Specifier la date" name="date_debut" [(ngModel)]="date_debut" required [(ngModel)]="datedebutt">
+        <input type="date" placeholder="Specifier la date" name="datedebutt" [(ngModel)]="date_debut" required [(ngModel)]="date_debut">
       </label>
       
     
@@ -56,6 +56,10 @@
       <label class="item item-input item-stacked-label mb-4" >
         <span class="input-label">Intervalle</span><br>
         <input type="time" placeholder="Entre prises" [(ngModel)]="intervalle" name="intervalle" required [(ngModel)]="intervallee">
+      </label>
+      <label class="item item-input item-stacked-label mb-4" >
+        <span class="input-label">Premiere prise</span><br>
+        <input type="time" placeholder="premiere_prise" [(ngModel)]="premiere_prise" name="premiere_prise" required [(ngModel)]="premiere_prise">
       </label>
     </div>
    
