@@ -10,14 +10,14 @@
     <div class="logo"> <img src="../assets/l.png" alt=""> </div>
    
  
- 
+    <ion-toggle [(ngModel)]="resume"></ion-toggle>
+    <a href="/notification">Activer</a>
 
   <h1>VITAL</h1>
 
   <h6>BIENVENUE SUR VOTRE APPLICATION DE SUIVI </h6>
 <div class="text-center">
-  <button style="margin-right: 3%;" class="btn btn-success" routerLink="/connexion">COMMENCER</button>
+  <button style="margin-right: 3%;" class="btn btn-success" routerLink="/connexion" (click)="ert()">COMMENCER</button>
 </div>
 </div>
-
 </ion-content>
