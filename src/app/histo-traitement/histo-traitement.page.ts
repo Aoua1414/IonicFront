@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TraitementServiceService } from '../Services/traitement-service.service';
 import { TokenStorageService } from '../_services/token-storage.service';
 import Swal from 'sweetalert2';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-histo-traitement',
@@ -12,6 +13,8 @@ export class HistoTraitementPage implements OnInit {
   touttraitememt:any;
   user: any;
   sestraitements: any;
+  http: any;
+  delete:any;
 
   constructor(private serviceTraitement : TraitementServiceService, private storage:TokenStorageService) { }
 
@@ -24,67 +27,21 @@ export class HistoTraitementPage implements OnInit {
       this.serviceTraitement.affichertoustraitdunuser(this.user.id).subscribe(data=>{
       this.sestraitements=data
     })
+   
+
+
   }
 
-  // modal suppression
-
-  // openModal(nom_medoc : any, id_traitement : number) {
-  //   if(nom_medoc !== undefined){
-  //     Swal.fire({
-  //       title: nom_medoc,
-  //       text: "Confirmer la suppression ?",
-  //       icon: 'warning',
-  //       showCancelButton: true,
-  //       confirmButtonColor: '#3085d6',
-  //       cancelButtonColor: '#d33',
-  //       cancelButtonText : "NON",
-  //       confirmButtonText: 'OUI'
-  //     }).then((result) => {
-  //       if (result.isConfirmed) {
-  //         //suppp
-  //         this.serviceTraitement.supptraitement(id_traitement).subscribe(() => {
-  //         console.log(id_traitement)
-  //         Swal.fire(
-  //           'Supprimer!',
-  //           'Traitement supprimé avec succès'
-  //         );
-  //       });
-        
-  //     }
-  //   });
-  //   }
+  effacerTrait(id_traitement:number){
+    this.serviceTraitement.supp_traitement(id_traitement).subscribe(data=>{
+      this.delete=data
+     })
+  }
+ 
+ 
     
 
   }
-// openModal(username : any, id : number) {
-//   Swal.fire({
-//     title: username,
-//     text: "Commfirmer la suppression ?",
-//     icon: 'warning',
-//     showCancelButton: true,
-//     confirmButtonColor: '#3085d6',
-//     cancelButtonColor: '#d33',
-//     cancelButtonText : "NON",
-//     confirmButtonText: 'OUI'
-//   }).then((result) => {
-//     if (result.isConfirmed) {
-      
-      
-//       //suppp
-//       this.abasse.supptraitement(id).subscribe(() => {});
-//       console.log(id)
-//       Swal.fire({
-//         title: 'Supprimer  avec succès',
-//         icon: 'success',
-//         showCancelButton: true,
-//         confirmButtonColor: '#3085d6',
-//         confirmButtonText: 'OK'
-//       });
-//       // window.location.reload()
 
+ 
 
-//     }
-//   });
-// }
-
-// }

@@ -102,10 +102,17 @@ export class TraitementServiceService {
 
     // suppression 
 
-  url=`http://localhost:8080/rdv/suprimer`
-  public supptraitement(id:number){
-    return this.http.delete(`${this.url}/${id}`);
-  }
+  // url=`http://localhost:8080/rdv/suprimer`
+  // public supptraitement(id:number){
+  //   return this.http.delete(`${this.url}/${id}`);
+  // }
+
+  supp_traitement(id_traitement:number):Observable<any>{
+
+
+    return this.http.delete(`http://localhost:8080/api/traitement/supprimer/${id_traitement}`)
+    }
+  
 
   }
   

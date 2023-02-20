@@ -31,7 +31,7 @@
     <h3>{{onetraitement.date_fin}}</h3>
 <br>
 <!-- <button type="button" class="adpd" data-bs-toggle="modal"  data-bs-target="#supprimer" (click)="openModal(onetraitement.nom_medoc, onetraitement.id_traitement)"> -->
-  <ion-icon style="color: red;"   name="trash-outline"></ion-icon>
+  <ion-icon style="color: red;" (click)="effacerTrait(onetraitement.id_traitement)"  name="trash-outline"></ion-icon>
    
 <!-- </button> -->
    
