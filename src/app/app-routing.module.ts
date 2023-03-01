@@ -86,6 +86,10 @@ const routes: Routes = [
     path: 'des',
     loadChildren: () => import('./des/des.module').then( m => m.DesPageModule),
     canActivate: [AuthGuardService]
+  },
+  {
+    path: 'ah',
+    loadChildren: () => import('./ah/ah.module').then( m => m.AhPageModule)
   }
 ];
 @NgModule({

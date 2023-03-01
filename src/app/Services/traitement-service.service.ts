@@ -112,7 +112,12 @@ export class TraitementServiceService {
 
     return this.http.delete(`http://localhost:8080/api/traitement/supprimer/${id_traitement}`)
     }
-  
+  // lister tous les traitements par user
+
+    TraitementByUser(id_user: number){
+      return this.http.get(`http://localhost:8080/api/traitement/toutTraitParId/${id_user}`)
+    }
+    
 
   }
   

@@ -9,6 +9,12 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+// import{LocalNotification} from '@ionic-native/local-notifications'
+//import { LocalNotifications } from '@capacitor/local-notifications';
+import { LocalNotifications, LocalNotificationsOriginal } from '@ionic-native/local-notifications';
+
+
+
 
 export function tokenGetter() {
   return sessionStorage.getItem("access_token");
@@ -18,14 +24,25 @@ export function tokenGetter() {
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule, JwtModule.forRoot({
+  imports: [BrowserModule, IonicModule.forRoot(),
+     AppRoutingModule,HttpClientModule, JwtModule.forRoot({
+      
     config: {
      tokenGetter: tokenGetter,
+     
     allowedDomains: ["localhost:8103" ]
     },
   }), RouterModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [
+   
+    
+   
+    { provide: RouteReuseStrategy,
+    
+     useClass: IonicRouteStrategy }],
+     
   bootstrap: [AppComponent],
+ 
 })
 export class AppModule {}
 

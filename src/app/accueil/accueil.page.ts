@@ -36,7 +36,7 @@ notifications = [
     {
         title: 'Abasse 2',
         body: 'Cherie Aoua 2',
-        duree:3000
+        duree:15000
     },
     {
         title: 'Abasse 3',
@@ -48,10 +48,11 @@ notifications = [
   constructor(private connService: ConnServiceService, private tokenStorage: TokenStorageService,private route:Router) { }
 
   ngOnInit() {
-    let delayBetweenNotifications = 5000; // Remplacez 5000 par la valeur de votre choix
+    let delayBetweenNotifications = 20000; // Remplacez 5000 par la valeur de votre choix
 
     setInterval(() => {
         if (this.resume) {
+          
             this.schedule();
         }
     }, delayBetweenNotifications);
@@ -85,8 +86,36 @@ notifications = [
 // Planifier les notifications
 schedule() {
   for (let i = 0; i < this.notifications.length; i++) {
+    const notification = this.notifications[i];
+    const delay = notification.duree;
+  
+    setTimeout(() => {
+      if (this.resume) {
+        let id = this.ids.length;
+        this.ids.push(id);
+  
+        let options: ScheduleOptions = {
+          notifications: [{
+            id: id,
+            title: notification.title,
+            body: notification.body,
+            schedule: { at: new Date() }
+          }]
+        };
+  
+        LocalNotifications.schedule(options).then(() => {
+          console.log('Notification planifiée!'+notification.title);
+        });
+      }
+    }, delay);
+  }
+  
+ 
+ 
+  /* for (let i = 0; i < this.notifications.length; i++) {
       let t = new Date();
-      t.setTime(t.getTime() + this.notifications[i].duree);
+      t.setTime(this.notifications[i].duree);
+      console.log("duree "+t)
       let id = this.ids.length;
       this.ids.push(id);
 
@@ -104,7 +133,7 @@ schedule() {
               console.log('Notification planifiée!');
           });
       }
-  }
+  }*/
 }
 onSubmit(): void {
 
