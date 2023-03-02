@@ -29,19 +29,19 @@ bod:string="";
  
 notifications = [
     {
-        title: 'Abasse 1',
-        body: 'herie Aoua 1',
-        duree:4000
+        title: 'Paracetamol',
+        body: '2 pillules',
+        duree:60000
     },
     {
-        title: 'Abasse 2',
-        body: 'Cherie Aoua 2',
-        duree:15000
+        title: 'Opthalmo',
+        body: 'Consultation',
+        duree:650000
     },
     {
-        title: 'Abasse 3',
-        body: 'Aoua3',
-        duree:6000
+        title: 'Chirurgie',
+        body: 'operation',
+        duree:70000
     }
 ];
 

@@ -10,7 +10,7 @@ import { ConnServiceService } from '../Services/conn-service.service';
 })
 export class InscriptionPage implements OnInit {
   success: any;
-  form:any= { username: '', email: '', numero: '', password: '', };
+  form:any= { username: '', email: '', numero: '', password: '', password2: '' };
   erreur: any;
 isLoggedIn: any;
 
@@ -20,29 +20,33 @@ isLoggedIn: any;
   }
   onSubmit(): void {
     // 
-    const {username, email,numero, password } = this.form;
 
-    this.connService.inscription(username, email,numero, password).subscribe(
-      data => {
-        this.success = data
-        if (this.success.status = true)
-         {
-          //swl=popop
-          Swal.fire({
-            heightAuto: false,
-           // position: 'top-end',
-            icon: 'success',
-            text: 'Compte créer avec succès',
-            showConfirmButton: false,
-            timer: 2500
-              })
-              this.router.navigateByUrl('/connexion')
-         }
-        if(this.success.status = false) {
-          this.erreur = this.success.message
+    const {username, email,numero, password, password2 } = this.form;
+    if(this.form.password ==this.form.password2){
+      this.connService.inscription(username, email,numero, password,).subscribe(
+        data => {
+          this.success = data
+          if (this.success.status = true)
+           {
+            //swl=popop
+            Swal.fire({
+              heightAuto: false,
+             // position: 'top-end',
+              icon: 'success',
+              text: 'Compte crée avec succès',
+              showConfirmButton: false,
+              timer: 2500
+                })
+                this.router.navigateByUrl('/connexion')
+           }
+          if(this.success.status = false) {
+            this.erreur = this.success.message
+          }
         }
-      }
-    );
+      );
+    
+    }
+   
 
     }}
 

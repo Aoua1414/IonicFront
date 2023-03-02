@@ -43,7 +43,13 @@
         #password="ngModel">
     </label>
 
-  <div class="text-center" >
+    <label class="item item-input item-stacked-label mb-4" style="margin-top: -8%;">
+      <span class="input-label">Confirmation</span><br>
+      <input type="password" placeholder="confirmer password" name="password2" [(ngModel)]="form.password2" required minlength="6"
+        #password="ngModel">
+    </label>
+    
+      <div class="text-center" >
     <button type="submit" class="btn btn-success" style="padding: 1%; margin-right: 30%;">S'inscrire</button>
   </div>
 </form>
