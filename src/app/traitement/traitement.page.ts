@@ -49,7 +49,7 @@ ngOnInit() {
 
 this.id = 2;
 this.traitement.TraitementByUser(this.id).subscribe(res =>{
-//tu dois creer la variable traitements en haut
+//creer la variable traitements en haut
 this.traitements = res
 console.log("traitement ")
 console.log(this.traitements.length)
@@ -138,7 +138,7 @@ const heureDePrises = new Date(nows + 5 * 1000);
 }
 
 AbasseSchedule(){
-  this.id = 2;
+ // this.id = 2;
   this.traitement.TraitementByUser(this.id).subscribe(res =>{
   //tu dois creer la variable traitements en haut
   this.traitements = res
@@ -184,25 +184,7 @@ AbasseSchedule(){
   this.id = this.tokenStorage.getUser().id;
   console.log('utilisateur ' +this.id)
 
-// this.form2.nom_medoc = this.form.nom_medoc
-// this.form2.duree_traitement = this.form.duree_traitement
-// this.form2.nbrePillule = this.form.nbrePillule
-// this.form2.intervalle = this.form.intervalle
-// this.form2.date_debut = this.form.date_debut
-// this.form2.date_fin = this.form.date_fin
-// this.form2.premiere_prise = this.form.premiere_prise
-// this.form2.fois_parjour = this.form.fois_parjour
 
-//affichage
-
-  // console.log('Test '+this.form2.nom_medoc)
-  // console.log('Test '+this.form2.duree_traitement)
-  // console.log('Test '+this.form2.nbrePillule)
-  // console.log('Test '+this.form2.intervalle)
-  // console.log('Test '+this.form2.date_debut)
-  // console.log('Test '+this.form2.date_fin)
-  // console.log('Test '+this.form2.premiere_prise)
-  // console.log('Test '+this.form2.fois_parjour)
 
        this.traitement.ajout_traitement(this.form2.nom_medoc,this.form2.duree_traitement,this.form2.nbrePillule,this.form2.fois_parjour,this.form2.date_debut,this.form2.date_fin,this.form2.premiere_prise,this.form2.intervalle,this.id).subscribe(data=>{
        this.tokenStorage.saveToken(data.accessToken);

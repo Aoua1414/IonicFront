@@ -19,29 +19,54 @@ export class HistoTraitementPage implements OnInit {
   constructor(private serviceTraitement : TraitementServiceService, private storage:TokenStorageService) { }
 
   ngOnInit() {
-   this.user= this.storage.getUser()
+   this.user = this.storage.getUser()
+  //console.log('id -----'+this.user.id)
      this.serviceTraitement.lister_traitement().subscribe(data =>{
       this.touttraitememt= data;
-      console.log('contenu traitememt '+this.touttraitememt)
+     // console.log('contenu traitememt '+this.touttraitememt)
      })
       this.serviceTraitement.affichertoustraitdunuser(this.user.id).subscribe(data=>{
       this.sestraitements=data
+      
     })
    
 
 
   }
 
+
+
   effacerTrait(id_traitement:number){
-    this.serviceTraitement.supp_traitement(id_traitement).subscribe(data=>{
-      this.delete=data
-     })
-  }
- 
- 
-    
+    Swal.fire({
+      title: 'Vous voulez vraiment supprimer?',
+      text: "Cette action est irreversible",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Oui',
+       position:'center',
+      heightAuto: false
+    }).then((result) => {
+      if (result.isConfirmed) {  
+        this.serviceTraitement.supptraitement(id_traitement).subscribe(data=>{
+        console.log(data)
+       })
+        Swal.fire({
+          title: 'C\'est fait!',
+          text:'Suppression reussie',
+          icon: 'success',
+          heightAuto: false,
+        }
 
-  }
+        )
+      }
+    })
+  }}
 
+  //  effacerTrait(id_traitement:number){
+  //   this.serviceTraitement.supp_traitement(id_traitement).subscribe(data=>{
+  //     this.delete=data
+      
  
 

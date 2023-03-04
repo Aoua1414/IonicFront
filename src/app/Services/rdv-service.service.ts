@@ -92,7 +92,7 @@ listerparIdRdv (id_rdv: number):Observable<any>{
 
   // suppression 
 
-  url=`http://localhost:8080/rdv/suprimer/2`
+  url=`http://localhost:8080/rdv/suprimer`
   public supprdv(id:number){
     return this.http.delete(`${this.url}/${id}`);
   }

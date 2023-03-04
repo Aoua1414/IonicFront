@@ -25,8 +25,8 @@ export class TraitementServiceService {
     date_fin:any,
     premiere_prise:any,
     intervalle:any,
-     id:any
-     ):Observable<any>{
+     id:number
+     ): Observable<any>{
     let traitement=
 
     {
@@ -40,6 +40,7 @@ export class TraitementServiceService {
       "intervalle":intervalle+":00" 
   }
   console.log(traitement)
+  console.log(id)
     return this.http.post(`http://localhost:8080/api/traitement/ajouter/${id}`,traitement);
   }
 
@@ -95,17 +96,17 @@ export class TraitementServiceService {
 
   //afficher tous les traitements d'un user
   
-  affichertoustraitdunuser(id_user:any):Observable<any>{
+  affichertoustraitdunuser(id_user:number):Observable<any>{
 
     return this.http.get(`http://localhost:8080/api/traitement/traituserconn/${id_user}`);
   }
 
     // suppression 
 
-  // url=`http://localhost:8080/rdv/suprimer`
-  // public supptraitement(id:number){
-  //   return this.http.delete(`${this.url}/${id}`);
-  // }
+  url=`http://localhost:8080/rdv/suprimer`
+  public supptraitement(id:number){
+    return this.http.delete(`${this.url}/${id}`);
+  }
 
   supp_traitement(id_traitement:number):Observable<any>{
 
