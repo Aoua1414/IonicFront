@@ -15,13 +15,12 @@
       <img src="../assets/l.png" alt="" class="logo">
     </div>
 
-    <ion-icon name="arrow-undo-outline" [routerLink]="['/histo-traitement']" style="color: #149B54; font-size: 150%; margin-left: 3%; ">retour</ion-icon>
-
+    <ion-icon name="arrow-undo-outline" (click)="goBack()" style="color: #149B54; font-size: 150%; margin-left: 3%; ">retour</ion-icon>
+    <ion-button (click)="goBack()" style="color: #149B54;">Retour</ion-button>
    <ion-card class="car bg-white" style="margin-top: 1%;">
-
     
     <div class="cont">
-      <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+      <form  name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
       <label class="item item-input item-stacked-label mb-4" >
         <span class="input-label">Nom Medicament</span><br>
         <input type="text" placeholder="Le nom du medicament" name="nom_medoc"
@@ -48,7 +47,7 @@
       <br>
       <div class="hum" style="margin-top: -8%;">
       <label class="item item-input item-stacked-label mb-4" style=" margin-top:0%;">
-        <span class="input-label" style="">Intervalle</span><br>
+        <span class="input-label">Intervalle</span><br>
         <input type="time" placeholder="Entre prises" name="intervalle"
         [(ngModel)]="form2.intervalle"
         required

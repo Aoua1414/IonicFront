@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 import { TraitementServiceService } from '../Services/traitement-service.service';
 import { TokenStorageService } from '../_services/token-storage.service';
 //import { LocalNotifications,ScheduleOptions } from '@capacitor/local-notifications';
@@ -42,7 +43,7 @@ errorMessage = '';
   id: any;
   Message: any;
   title:any;
-constructor(private traitement:TraitementServiceService,private tokenStorage: TokenStorageService,private route:Router ) { }
+constructor(private traitement:TraitementServiceService,private tokenStorage: TokenStorageService,private route:Router, private navController: NavController ) { }
 
 traitements:any;
 ngOnInit() {
@@ -187,8 +188,8 @@ AbasseSchedule(){
 
 
        this.traitement.ajout_traitement(this.form2.nom_medoc,this.form2.duree_traitement,this.form2.nbrePillule,this.form2.fois_parjour,this.form2.date_debut,this.form2.date_fin,this.form2.premiere_prise,this.form2.intervalle,this.id).subscribe(data=>{
-       this.tokenStorage.saveToken(data.accessToken);
-       this.tokenStorage.saveUser(data);
+      //  this.tokenStorage.saveToken(data.accessToken);
+      //  this.tokenStorage.saveUser(data);
        this.reloadPage();
        this.Message = data.message;
  })                 
@@ -198,5 +199,10 @@ AbasseSchedule(){
     window.location.reload();
   // this.route.navigateByUrl("/sidebar/w")
    }
+
+   goBack(){
+    this.navController.back();
+   }
+
 
 }
