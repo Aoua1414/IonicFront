@@ -23,11 +23,12 @@ export class HistoTraitementPage implements OnInit {
   //console.log('id -----'+this.user.id)
      this.serviceTraitement.lister_traitement().subscribe(data =>{
       this.touttraitememt= data;
+
      // console.log('contenu traitememt '+this.touttraitememt)
      })
       this.serviceTraitement.affichertoustraitdunuser(this.user.id).subscribe(data=>{
       this.sestraitements=data
-      
+      console.log(this.sestraitements)
     })
    
 
@@ -49,7 +50,8 @@ export class HistoTraitementPage implements OnInit {
       heightAuto: false
     }).then((result) => {
       if (result.isConfirmed) {  
-        this.serviceTraitement.supptraitement(id_traitement).subscribe(data=>{
+        console.log("jkjkjkk"+ id_traitement)
+        this.serviceTraitement.supp_traitement(id_traitement).subscribe(data=>{
         console.log(data)
        })
         Swal.fire({

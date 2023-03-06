@@ -141,7 +141,7 @@ const heureDePrises = new Date(nows + 5 * 1000);
 AbasseSchedule(){
  // this.id = 2;
   this.traitement.TraitementByUser(this.id).subscribe(res =>{
-  //tu dois creer la variable traitements en haut
+  //la variable traitements en haut
   this.traitements = res
   console.log("traitement ")
   console.log(this.traitements.length)
@@ -203,6 +203,10 @@ AbasseSchedule(){
    goBack(){
     this.navController.back();
    }
+
+  //  
+
+ 
 
 
 }

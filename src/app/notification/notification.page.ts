@@ -95,12 +95,4 @@ setInterval(()=>{
       this.rdvlist=res
     })
   }
-
- 
-
- 
-  
- 
-  
-
 }
